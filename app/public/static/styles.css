@@ -23,7 +23,7 @@
 }
 
 #home {
-    background-image: url("Home Background.png"); /* or your file path */
+    background-image: url("./images/Home Background.png"); /* or your file path */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@ section {
 }
 
 .hero-background {
-    background-image: url("Home Background.png"); /* make sure this filename matches your actual image */
+    background-image: url("./images/Home Background.png");
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -441,6 +441,7 @@ footer {
         "GRAD" 0,
         "opsz" 24;
     font-family: "Material Symbols Outlined";
+    user-select: none;
 }
 
 .icon .fill {
