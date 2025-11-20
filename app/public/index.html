@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Your Website Name</title>
+        <link rel="stylesheet" href="styleproj.css" />
+    </head>
+    <body>
+        <button
+            onclick="openModal()"
+            style="position: fixed; bottom: 12px; right: 12px; z-index: 2000"
+        >
+            Open signup modal
+        </button>
+        <!-- Signup Modal -->
+        <div class="modal-overlay" id="signupOverlay" hidden></div>
+
+        <div
+            class="modal"
+            id="signupModal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="signupTitle"
+            aria-describedby="signupDesc"
+            hidden
+        >
+            <button class="modal-close" id="signupClose" aria-label="Close">
+                &times;
+            </button>
+
+            <h2 id="signupTitle">Join The Grizzly Den</h2>
+            <p id="signupDesc">
+                Create an account for early drops, exclusive deals, and free
+                shipping.
+            </p>
+
+            <form id="signupForm" novalidate>
+                <label class="sr-only" for="signupEmail">Email</label>
+                <input
+                    type="email"
+                    id="signupEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                    aria-required="true"
+                />
+
+                <label class="sr-only" for="signupPassword">Password</label>
+                <input
+                    type="password"
+                    id="signupPassword"
+                    name="password"
+                    placeholder="Create a password"
+                    required
+                    aria-required="true"
+                />
+
+                <button type="submit" class="btn primary">
+                    Create account
+                </button>
+                <button type="button" class="btn ghost" id="continueGuest">
+                    Continue as guest
+                </button>
+
+                <div class="helper">
+                    Already have an account? <a href="/login">Sign in</a>
+                </div>
+
+                <div
+                    class="form-error"
+                    id="signupError"
+                    aria-live="polite"
+                ></div>
+            </form>
+        </div>
+        <div class="promo-bar">
+            <p>Store-wide 50% off all November!</p>
+        </div>
+
+        <section id="home" class="hero-section">
+            <!-- NAVBAR OVER HERO IMAGE -->
+            <nav class="navbar">
+                <ul class="nav-left">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#equipment">Equipment</a></li>
+                    <li><a href="#supplements">Supplements</a></li>
+                    <li><a href="#accessories">Accessories</a></li>
+                    <li><a href="#apparel">Apparel</a></li>
+                </ul>
+
+                <div class="logo-center">
+                    <img src="Grizzly Gear.png" alt="The Grizzly Den Logo" />
+                </div>
+
+                <div class="nav-right">
+                    <a href="#cart" class="cart-link">
+                        <img src="Cart.png" alt="Shopping Cart" />
+                    </a>
+                </div>
+            </nav>
+
+            <!-- HERO IMAGE + TEXT -->
+            <div class="hero-content">
+                <h1 class="hero-title">Strength that stands tall</h1>
+                <p class="hero-subtitle">
+                    Black Friday All Month | Gear Up & Save Big!
+                </p>
+                <a href="#best-sellers" class="hero-btn">Shop Now</a>
+            </div>
+        </section>
+
+        <section id="best-sellers" class="best-sellers">
+            <h2>Best Sellers</h2>
+            <div class="best-grid">
+                <div class="product-card">
+                    <div class="product-img-placeholder">Image</div>
+                    <h3>Adjustable Dumbbells</h3>
+                    <p class="price">$199.99</p>
+                    <button class="product-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-placeholder">Image</div>
+                    <h3>Heavy Duty Lifting Belt</h3>
+                    <p class="price">$59.99</p>
+                    <button class="product-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-placeholder">Image</div>
+                    <h3>Pre-Workout Fury Mix</h3>
+                    <p class="price">$39.99</p>
+                    <button class="product-btn">Add to Cart</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img-placeholder">Image</div>
+                    <h3>Compression Tee</h3>
+                    <p class="price">$29.99</p>
+                    <button class="product-btn">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="equipment">
+            <!-- Equipment section -->
+            <h2>Our Equipment</h2>
+            <p>Browse the best gym equipment.</p>
+        </section>
+
+        <section id="supplements">
+            <!-- Supplements section -->
+            <h2>Supplements</h2>
+            <p>Explore high-quality supplements.</p>
+        </section>
+
+        <section id="accessories">
+            <!-- Accessories section -->
+            <h2>Accessories</h2>
+            <p>Get your fitness gear essentials.</p>
+        </section>
+
+        <section id="apparel">
+            <!-- Apparel section -->
+            <h2>Apparel</h2>
+            <p>Shop for gym clothing and gear.</p>
+        </section>
+
+        <section id="about">
+            <!-- About Us section -->
+            <h2>About Us</h2>
+            <p>Learn more about us.</p>
+        </section>
+
+        <section id="contact">
+            <!-- Contact section -->
+            <h2>Contact</h2>
+            <p>Get in touch with us.</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Your Website Name. All Rights Reserved.</p>
+        </footer>
+
+        <script src="scriptproj.js"></script>
+    </body>
+</html>

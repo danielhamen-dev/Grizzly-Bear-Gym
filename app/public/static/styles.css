@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.promo-bar {
+    font-family:
+        Lucida Console,
+        sans-serif;
+    background-color: #ff5755; /* Bright color to grab attention */
+    color: white;
+    text-align: center;
+    padding: 5px 0; /* Thin height */
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.promo-bar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* stays above everything else */
+}
+
+#home {
+    background-image: url("Home Background.png"); /* or your file path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    height: 100vh; /* full screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Basic styling for the body */
+body {
+    font-family:
+        Trebuchet MS,
+        sans-serif;
+    background-color: #2b2b2b;
+    color: #f5f5f5;
+}
+
+/* Header + sticky navbar */
+
+/* Main navbar layout */
+.navbar {
+    position: absolute; /* place it ON TOP of the hero image */
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 40px 40px;
+    z-index: 10; /* ensures navbar overlays the image */
+    color: #f5f5f5;
+}
+
+/* Left: category links */
+.nav-left {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-left a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
+}
+
+.nav-left a:hover {
+    color: #ffa72c; /* matches your accent color */
+}
+
+/* Center: logo */
+/* Fix logo perfectly centered */
+.logo-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Logo shrink animation */
+.logo-center img {
+    height: 40px; /* make it smaller (try 40px, 35px, etc.) */
+    width: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.shrink-logo .logo-center img {
+    height: 30px; /* smaller logo when scrolled */
+}
+
+header {
+    background-color: #252525;
+    transition:
+        background-color 0.3s ease-in-out,
+        box-shadow 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: #141414; /* darker tone when scrolled */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* adds subtle shadow */
+}
+
+/* Right: cart icon */
+.nav-right img {
+    height: 28px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.nav-right img:hover {
+    transform: scale(1.1);
+}
+
+/* Mobile layout tweaks */
+@media (max-width: 768px) {
+    header {
+        top: 40px; /* promo bar is a bit taller on mobile, you can tweak */
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-left {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-right {
+        margin-top: 6px;
+    }
+
+    .logo-center img {
+        height: 50px;
+    }
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    margin: 10px 0;
+    background-color: #252525;
+}
+
+/* Hero section (home) */
+#home.hero-section {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+.hero-background {
+    background-image: url("Home Background.png"); /* make sure this filename matches your actual image */
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* full screen hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Dark overlay & content */
+.hero-content {
+    text-align: center;
+    color: #f5f5f5;
+    background: rgba(0, 0, 0, 0.45);
+    padding: 40px 24px;
+    border-radius: 16px;
+    max-width: 700px;
+    margin: 0 16px;
+}
+
+.hero-title {
+    font-size: 42px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.hero-subtitle {
+    font-family:
+        Lucida Console,
+        sans-serif;
+    font-size: 18px;
+    margin-bottom: 24px;
+    color: #fbd38d;
+}
+
+/* Shop Now button */
+.hero-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: #c76a2a;
+    color: #f0ede8;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 999px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.2s ease;
+}
+
+.hero-btn:hover {
+    background: #ffa72c;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile tweak for hero */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+}
+
+/* Best Sellers section */
+.best-sellers {
+    background-color: #252525;
+    padding: 60px 20px;
+    margin: 0 0 40px;
+}
+
+.best-sellers h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Grid of product cards */
+.best-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background: #2f2f2f;
+    border-radius: 12px;
+    padding: 18px 16px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+.product-img-placeholder {
+    background: #3a3a3a;
+    border-radius: 10px;
+    height: 140px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #b0b0b0;
+}
+
+.product-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffa72c;
+    margin-bottom: 10px;
+}
+
+.product-btn {
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: none;
+    background: #c76a2a;
+    color: #f0ede8;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease;
+}
+
+.product-btn:hover {
+    background: #ffa72c;
+    transform: translateY(-1px);
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* --- Modal base --- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%) scale(0.98);
+    z-index: 1501;
+    width: min(92vw, 520px);
+    background: #2b2b2b;
+    border-radius: 14px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    padding: 22px 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        transform 220ms ease,
+        opacity 180ms ease;
+}
+
+.modal.open,
+.modal-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal.open {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Modal content */
+.modal h2 {
+    margin: 8px 0 6px;
+    font-size: 24px;
+}
+.modal p {
+    margin: 0 0 14px;
+    color: #ededed;
+}
+
+#signupForm {
+    display: grid;
+    gap: 10px;
+}
+#signupForm input {
+    width: 100%;
+    padding: 12px 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.btn {
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn.primary {
+    background: #c76a2a;
+    color: #f0ede8;
+    font-weight: bold;
+}
+.btn.ghost {
+    background: transparent;
+    border: 1px solid #c76a2a;
+    color: #ededed;
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: transparent;
+    border: 0;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.helper {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-top: 4px;
+}
+.form-error {
+    font-size: 13px;
+    color: #ea0e0e;
+    min-height: 16px;
+}
+
+/* screen-reader only */
+.sr-only {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .modal,
+    .modal-overlay {
+        transition: none;
+    }
+}
