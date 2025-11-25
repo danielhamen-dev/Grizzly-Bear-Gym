@@ -471,3 +471,113 @@ a .icon:active {
 a:has(.icon) {
     text-decoration: none;
 }
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    background: url("./images/Home%20Background.png") center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 42px;
+    margin: 0;
+}
+
+.shop-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px;
+}
+
+.search-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-row input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    padding: 6px 12px;
+    background: #eee;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tag.active {
+    background: #333;
+    color: white;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.item-card {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.item-card h3 {
+    margin: 6px 0;
+    font-size: 20px;
+}
+
+.item-card p {
+    margin: 4px 0;
+    font-size: 15px;
+    color: #555;
+}
+
+.item-card button {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.item-card button:hover {
+    background: #444;
+}

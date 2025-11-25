@@ -4,13 +4,14 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home &bull; Grizzly Bear Gym</title>
-        <link rel="stylesheet" href="./static/styles.css" />
+        <link rel="stylesheet" href="./static/global.css" />
 
         <!--Google Icons-->
         <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
+        <script src="static/global.js"></script>
     </head>
     <body>
         <button
@@ -79,9 +80,6 @@
                     aria-live="polite"
                 ></div>
             </form>
-        </div>
-        <div class="promo-bar">
-            <p>Store-wide 50% off all November!</p>
         </div>
 
         <section id="home" class="hero-section">
@@ -194,6 +192,6 @@
             <p>&copy; 2025 Your Website Name. All Rights Reserved.</p>
         </footer>
 
-        <script src="static/script.js"></script>
+        <script src="static/home.js"></script>
     </body>
 </html>
