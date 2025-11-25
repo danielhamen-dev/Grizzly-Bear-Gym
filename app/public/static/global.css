@@ -79,12 +79,11 @@ body {
     color: #ffa72c; /* matches your accent color */
 }
 
-/* Center: logo */
-/* Fix logo perfectly centered */
 .logo-center {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
 }
 
 /* Logo shrink animation */
@@ -92,6 +91,8 @@ body {
     height: 40px; /* make it smaller (try 40px, 35px, etc.) */
     width: auto;
     transition: all 0.3s ease-in-out;
+
+    cursor: pointer;
 }
 
 .shrink-logo .logo-center img {
@@ -523,16 +524,19 @@ a:has(.icon) {
 
 .tag {
     padding: 6px 12px;
-    background: #eee;
+    background: #777;
     border-radius: 20px;
     font-size: 14px;
+    color: #ddd;
     cursor: pointer;
     user-select: none;
+    opacity: 75%;
 }
 
 .tag.active {
-    background: #333;
+    background: #444;
     color: white;
+    opacity: 100%;
 }
 
 .item-grid {

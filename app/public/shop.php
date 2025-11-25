@@ -21,11 +21,11 @@
         <!-- NAVBAR OVER HERO IMAGE -->
         <nav class="navbar">
             <ul class="nav-left">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#equipment">Equipment</a></li>
-                <li><a href="#supplements">Supplements</a></li>
-                <li><a href="#accessories">Accessories</a></li>
-                <li><a href="#apparel">Apparel</a></li>
+                <li><a href="home.php">Home</a></li>
+                <li><a href="shop.php#equipment">Equipment</a></li>
+                <li><a href="shop.php#supplements">Supplements</a></li>
+                <li><a href="shop.php#accessories">Accessories</a></li>
+                <li><a href="shop.php#apparel">Apparel</a></li>
             </ul>
 
             <div class="logo-center">
@@ -100,13 +100,17 @@ function renderItems() {
     const searchText = document.getElementById("searchBox").value.toLowerCase();
 
     const show = fullInventory.filter(item => {
-        let s = item.name.toLowerCase().includes(searchText);
+        // Search filter
+        const matchesSearch = item.name.toLowerCase().includes(searchText);
 
-        if (activeTags.size > 0) {
-            if (!activeTags.has(item.tag)) return false;
-        }
+        // Tag filter
+        const matchesTags =
+            activeTags.size === 0 ||                      // no tags → allow all
+            Array.from(activeTags).some(tag =>            // at least one tag must match
+                item.tags.includes(tag)
+            );
 
-        return s;
+        return matchesSearch && matchesTags;
     });
 
     if (show.length === 0) {
@@ -131,6 +135,7 @@ function renderItems() {
         grid.appendChild(card);
     }
 }
+
 
 // -----------------------------------------------------------
 // Tag Filtering

@@ -11,6 +11,7 @@
       "id": 1,
       "name": "Grizzly T-Shirt",
       "price": 29.99,
+      "tags": ["shirt"],
       "stock": 50
     }
   ],

@@ -86,11 +86,11 @@
             <!-- NAVBAR OVER HERO IMAGE -->
             <nav class="navbar">
                 <ul class="nav-left">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#equipment">Equipment</a></li>
-                    <li><a href="#supplements">Supplements</a></li>
-                    <li><a href="#accessories">Accessories</a></li>
-                    <li><a href="#apparel">Apparel</a></li>
+                    <li><a href="home.php">Home</a></li>
+                    <li><a href="shop.php#equipment">Equipment</a></li>
+                    <li><a href="shop.php#supplements">Supplements</a></li>
+                    <li><a href="shop.php#accessories">Accessories</a></li>
+                    <li><a href="shop.php#apparel">Apparel</a></li>
                 </ul>
 
                 <div class="logo-center">
