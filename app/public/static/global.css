@@ -609,3 +609,136 @@ select:focus {
 .item-card .sale-price {
     font-weight: bold;
 }
+
+/* ============================ */
+/* FOOTER */
+/* ============================ */
+.site-footer {
+    background: #1e1e1e;
+    padding: 50px 30px 25px;
+    color: #f5f5f5;
+    border-top: 2px solid #333;
+    margin-top: 60px;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 260px;
+}
+
+.footer-col > h4 {
+    margin-bottom: 8px;
+}
+
+.footer-brand {
+    max-width: 340px;
+}
+
+.footer-logo {
+    width: 160px;
+    margin-bottom: 15px;
+    filter: brightness(1.1);
+}
+
+.footer-desc {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+/* Social Icons */
+.footer-social .icon {
+    font-size: 24px;
+    margin-right: 10px;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.footer-social .icon:hover {
+    opacity: 1;
+}
+
+/* Links Section */
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer-links li {
+    margin: 8px 0;
+}
+
+.footer-links a {
+    color: #d0d0d0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: #ffa72c;
+}
+
+/* Account Form */
+#footer-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#footer-auth-form input {
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #2b2b2b;
+    color: #eee;
+    font-size: 14px;
+}
+#footer-auth-form input:focus {
+    outline: none;
+    border-color: #ffa72c;
+}
+
+.footer-auth-btn {
+    width: 100%;
+}
+
+.footer-form-msg {
+    font-size: 13px;
+    margin-top: 6px;
+    min-height: 14px;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #888;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-brand {
+        margin: 0 auto;
+    }
+    #footer-auth-form {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+}

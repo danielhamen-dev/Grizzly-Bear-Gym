@@ -54,10 +54,10 @@ function get_footer_bar()
                 <h4>Explore</h4>
                 <ul class="footer-links">
                     <li><a href="/home.php">Home</a></li>
-                    <li><a href="/shop.php#equipment">Equipment</a></li>
-                    <li><a href="/shop.php#supplements">Supplements</a></li>
-                    <li><a href="/shop.php#accessories">Accessories</a></li>
-                    <li><a href="/shop.php#apparel">Apparel</a></li>
+                    <li><a href="/shop.php?tag=equipment">Equipment</a></li>
+                    <li><a href="/shop.php?tag=supplements">Supplements</a></li>
+                    <li><a href="/shop.php?tag=accessories">Accessories</a></li>
+                    <li><a href="/shop.php?tag=apparel">Apparel</a></li>
                     <li><a href="/about.php">About Us</a></li>
                     <li><a href="/contact.php">Contact</a></li>
                 </ul>
