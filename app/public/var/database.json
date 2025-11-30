@@ -6,23 +6,7 @@
       "password": "hashed_pw",
       "cart": [
         {
-          "id": 5,
-          "qty": 3
-        },
-        {
-          "id": 13,
-          "qty": 1
-        },
-        {
-          "id": 4,
-          "qty": 2
-        },
-        {
-          "id": 2,
-          "qty": 1
-        },
-        {
-          "id": 10,
+          "id": 24,
           "qty": 1
         }
       ]
@@ -50,7 +34,7 @@
       "price": 34.99,
       "tags": ["apparel"],
       "stock": 40,
-      "image": "https://ca.gymreapers.com/cdn/shop/files/training-shorts-black-front.jpg?v=1706028469&width=2048",
+      "image": "https:\/\/ca.gymreapers.com\/cdn\/shop\/files\/training-shorts-black-front.jpg?v=1706028469&width=2048",
       "best_seller": true
     },
     {
@@ -66,7 +50,7 @@
       "price": 19.99,
       "tags": ["accessory"],
       "stock": 70,
-      "image": "https://www.xtcfitness.ca/cdn/shop/files/xtc-gear-x-series-padded-grippy-lifting-straps-blue-lifting-straps-xs-pgls-blue-83583573-xtc-gear-42253815152947.jpg?v=1694558120&width=1024"
+      "image": "https:\/\/www.xtcfitness.ca\/cdn\/shop\/files\/xtc-gear-x-series-padded-grippy-lifting-straps-blue-lifting-straps-xs-pgls-blue-83583573-xtc-gear-42253815152947.jpg?v=1694558120&width=1024"
     },
     {
       "id": 6,
@@ -74,49 +58,55 @@
       "price": 44.99,
       "tags": ["accessory", "equipment"],
       "stock": 18,
-      "image": "https://au.gymreapers.com/cdn/shop/files/7mm-belt-black-front-angle.jpg?v=1715630030&width=2000"
+      "image": "https:\/\/au.gymreapers.com\/cdn\/shop\/files\/7mm-belt-black-front-angle.jpg?v=1715630030&width=2000"
     },
     {
       "id": 7,
       "name": "Adjustable Dumbbells (Pair)",
       "price": 199.99,
       "tags": ["equipment"],
-      "stock": 10
+      "stock": 10,
+      "image": "https://m.media-amazon.com/images/I/71dBSTcp9cL._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": 8,
       "name": "Resistance Band Set (5 Levels)",
       "price": 24.99,
       "tags": ["equipment"],
-      "stock": 60
+      "stock": 60,
+      "image": "https://i5.walmartimages.com/asr/267ce117-1723-4077-bccf-4c873deff6be.0b04f525be9b3c9ef665728f33547c6c.jpeg"
     },
     {
       "id": 9,
       "name": "Protein Shaker Bottle",
       "price": 12.99,
       "tags": ["accessory"],
-      "stock": 90
+      "stock": 90,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHwTbuJIZ6G80ePpW2TdNg-2v98Qxu0oXTaw&s"
     },
     {
       "id": 10,
       "name": "Creatine Monohydrate 300g",
       "price": 24.99,
       "tags": ["supplements"],
-      "stock": 35
+      "stock": 35,
+      "image": "https://media.supplementking.ca/catalog/product/cache/c7b67f1ce99d1caa405d0fe7ed968970/o/n/on_creatine_300g.jpg"
     },
     {
       "id": 11,
       "name": "Whey Protein (5lb, Chocolate)",
       "price": 59.99,
       "tags": ["supplements"],
-      "stock": 22
+      "stock": 22,
+      "image": "https://www.healthyplanetcanada.com/media/catalog/product/e/x/extreme-milk-chocolate.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=500&canvas=500:400"
     },
     {
       "id": 12,
       "name": "BCAA Recovery Powder (Lemon Lime)",
       "price": 29.99,
       "tags": ["supplements"],
-      "stock": 27
+      "stock": 27,
+      "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/sci/sci00021/l/51.jpg"
     },
     {
       "id": 13,
@@ -124,7 +114,7 @@
       "price": 19.99,
       "tags": ["accessory", "apparel"],
       "stock": 45,
-      "image": "https://i5.walmartimages.com/seo/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF",
+      "image": "https:\/\/i5.walmartimages.com\/seo\/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF",
       "best_seller": true
     },
     {
@@ -181,7 +171,8 @@
       "name": "Signature Tank Top",
       "price": 24.99,
       "tags": ["apparel", "shirt"],
-      "stock": 55
+      "stock": 55,
+      "image": "https://imagescdn.simons.ca/images/5549-157010-1-A1_2/signature-logo-ribbed-tank-top.jpg?__=6"
     },
     {
       "id": 22,
@@ -190,7 +181,7 @@
       "sale_price": 19.99,
       "tags": ["apparel"],
       "stock": 28,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s",
+      "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s",
       "best_seller": true
     },
     {
@@ -198,7 +189,8 @@
       "name": "Compression Long Sleeve Shirt",
       "price": 32.99,
       "tags": ["shirt", "apparel"],
-      "stock": 26
+      "stock": 26,
+      "image": "https://i5.walmartimages.com/asr/e451b66c-fbf3-491f-bb72-f400a7584948.46c3143ef6f98af99f50edaa49162b7a.jpeg"
     },
     {
       "id": 24,
@@ -206,14 +198,15 @@
       "price": 219.99,
       "tags": ["equipment"],
       "stock": 5,
-      "image": "https://m.media-amazon.com/images/I/51r75wdVeZL.jpg"
+      "image": "https:\/\/m.media-amazon.com\/images\/I\/51r75wdVeZL.jpg"
     },
     {
       "id": 25,
       "name": "Barbell Collar Clips (Pair)",
       "price": 9.99,
       "tags": ["equipment", "accessory"],
-      "stock": 65
+      "stock": 65,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSeGQvt3RiUYR000ldnSCxdm3EZGXtnsPndg&s"
     }
   ],
   "promos": [

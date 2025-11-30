@@ -315,6 +315,7 @@ document.addEventListener("click", async (e) => {
     loadCart();
 })();
 </script>
+<?php echo get_footer_bar(); ?>
 
 </body>
 </html>
