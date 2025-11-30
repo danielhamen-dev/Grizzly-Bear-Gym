@@ -145,7 +145,7 @@ function renderCart(cart) {
 
         html += `
         <div class="cart-card">
-            <img src="./static/images/Grizzly Gear.png">
+            <img src="${item.image}">
 
             <div class="cart-info">
                 <h3>${item.name}</h3>

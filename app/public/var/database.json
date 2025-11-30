@@ -35,8 +35,7 @@
       "price": 29.99,
       "tags": ["shirt", "apparel"],
       "stock": 50,
-      "best_seller": true,
-      "image": "static/images/products/p1-01.png"
+      "best_seller": true
     },
     {
       "id": 2,
@@ -51,7 +50,8 @@
       "price": 34.99,
       "tags": ["apparel"],
       "stock": 40,
-      "image": "https://ca.gymreapers.com/cdn/shop/files/training-shorts-black-front.jpg?v=1706028469&width=2048"
+      "image": "https://ca.gymreapers.com/cdn/shop/files/training-shorts-black-front.jpg?v=1706028469&width=2048",
+      "best_seller": true
     },
     {
       "id": 4,
@@ -122,7 +122,8 @@
       "price": 19.99,
       "tags": ["accessory", "apparel"],
       "stock": 45,
-      "image": "https://i5.walmartimages.com/seo/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF"
+      "image": "https://i5.walmartimages.com/seo/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF",
+      "best_seller": true
     },
     {
       "id": 14,
@@ -187,7 +188,8 @@
       "sale_price": 19.99,
       "tags": ["apparel"],
       "stock": 28,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s"
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s",
+      "best_seller": true
     },
     {
       "id": 23,
