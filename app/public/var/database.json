@@ -7,10 +7,18 @@
             "cart": [
                 {
                     "id": 5,
-                    "qty": 2
+                    "qty": 3
                 },
                 {
                     "id": 13,
+                    "qty": 1
+                },
+                {
+                    "id": 4,
+                    "qty": 2
+                },
+                {
+                    "id": 2,
                     "qty": 1
                 }
             ]
@@ -257,6 +265,10 @@
         {
             "code": "BEAR10",
             "discount": 0.1
+        },
+        {
+            "code": "NOV50",
+            "discount": 0.5
         }
     ],
     "orders": []

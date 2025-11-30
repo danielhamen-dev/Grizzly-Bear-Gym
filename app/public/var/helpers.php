@@ -29,3 +29,61 @@ function get_nav_bar()
         </nav>
     HTML;
 }
+
+function get_footer_bar()
+{
+    return <<<HTML
+    <footer class="site-footer">
+        <div class="footer-inner">
+
+            <div class="footer-col footer-brand">
+                <img src="./static/images/Grizzly Gear.png" class="footer-logo" alt="Grizzly Gear">
+                <p class="footer-desc">
+                    Strength that stands tall. Premium gym equipment, supplements, and apparel.
+                    Join the community and level up your grind.
+                </p>
+
+                <div class="footer-social">
+                    <span class="icon">fitness_center</span>
+                    <span class="icon">smartphone</span>
+                    <span class="icon">groups</span>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="/home.php">Home</a></li>
+                    <li><a href="/shop.php#equipment">Equipment</a></li>
+                    <li><a href="/shop.php#supplements">Supplements</a></li>
+                    <li><a href="/shop.php#accessories">Accessories</a></li>
+                    <li><a href="/shop.php#apparel">Apparel</a></li>
+                    <li><a href="/about.php">About Us</a></li>
+                    <li><a href="/contact.php">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Account</h4>
+                <form id="footer-auth-form">
+                    <input type="email" id="footerEmail" placeholder="Email">
+                    <input type="password" id="footerPassword" placeholder="Password">
+
+                    <button type="submit" class="btn primary footer-auth-btn">Sign In</button>
+                    <button type="button" class="btn ghost footer-auth-btn" id="footerSignup">
+                        Create Account
+                    </button>
+
+                    <p class="footer-form-msg" id="footerAuthMsg"></p>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Grizzly Gear. All rights reserved.</p>
+        </div>
+    </footer>
+
+    HTML;
+}

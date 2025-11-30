@@ -37,8 +37,9 @@
 // ------------------------------------------------------------
 // USER ID
 // ------------------------------------------------------------
-let appliedPromo = null;
-let appliedDiscount = 0;
+let appliedPromo = localStorage.getItem("promo_code") || null;
+let appliedDiscount = parseFloat(localStorage.getItem("promo_discount") || 0);
+
 let USER_ID = localStorage.getItem("user_id");
 if (!USER_ID) {
     USER_ID = 1;
@@ -64,6 +65,50 @@ async function loadCart() {
 
     if (!data.success) return renderEmptyCart();
     renderCart(data.cart);
+
+
+    if (appliedPromo) {
+        autoValidatePromo(appliedPromo, data.cart);
+    }
+}
+
+// ------------------------------------------------------------
+// VALIDATE PROMO CODE
+// ------------------------------------------------------------
+async function autoValidatePromo(code, cart) {
+    const msg = document.getElementById("promo-msg");
+    const promoInput = document.getElementById("promo-code");
+
+    const res = await fetch("../var/main.php?action=validate_promo", {
+        method: "POST",
+        body: new URLSearchParams({ code })
+    });
+
+    const data = await res.json();
+
+    if (!data.valid) {
+        // Promo no longer valid → remove it
+        appliedPromo = null;
+        appliedDiscount = 0;
+        localStorage.removeItem("promo_code");
+        localStorage.removeItem("promo_discount");
+
+        msg.textContent = "Promo expired or invalid.";
+        msg.style.color = "#d9534f";
+        updateSummary(cart);
+        return;
+    }
+
+    // Promo is valid → apply it
+    appliedPromo = code.toUpperCase();
+    appliedDiscount = parseFloat(data.discount);
+
+    promoInput.value = appliedPromo;
+
+    msg.textContent = `Promo applied automatically: ${appliedPromo} (-${(appliedDiscount * 100).toFixed(0)}%)`;
+    msg.style.color = "#2fa54f";
+
+    updateSummary(cart);
 }
 
 // ------------------------------------------------------------
@@ -157,37 +202,45 @@ function renderCart(cart) {
         const code = promoInput.value.trim();
         const msg = document.getElementById("promo-msg");
 
-        if (code.length === 0) {
+        if (!code) {
             msg.textContent = "Enter a promo code.";
             msg.style.color = "#d9534f";
             return;
         }
 
-        // Validate promo through backend
         const res = await fetch("../var/main.php?action=validate_promo", {
             method: "POST",
             body: new URLSearchParams({ code })
         });
+
         const data = await res.json();
 
         if (!data.valid) {
             appliedPromo = null;
             appliedDiscount = 0;
+
+            localStorage.removeItem("promo_code");
+            localStorage.removeItem("promo_discount");
+
             msg.textContent = "Invalid promo code.";
             msg.style.color = "#d9534f";
             updateSummary(window._currentCart);
             return;
         }
 
-        // Success
+        // Success → save to LS
         appliedPromo = code.toUpperCase();
         appliedDiscount = parseFloat(data.discount);
+
+        localStorage.setItem("promo_code", appliedPromo);
+        localStorage.setItem("promo_discount", appliedDiscount.toString());
 
         msg.textContent = `Promo applied: ${appliedPromo} (-${(appliedDiscount * 100).toFixed(0)}%)`;
         msg.style.color = "#2fa54f";
 
         updateSummary(window._currentCart);
     });
+
 
 }
 
@@ -207,7 +260,7 @@ function updateSummary(cart) {
 
     document.getElementById("summary-box").innerHTML = `
         <div class="summary-line"><span>Subtotal</span><span>$${subtotal.toFixed(2)}</span></div>
-        <div class="summary-line"><span>Discount</span><span>- $${(subtotal*appliedDiscount).toFixed(2)}</span></div>
+        <div class="summary-line"><span>Discount${appliedPromo ? ` ( <code>${appliedPromo}</code> )` : ""}</span><span>- $${(subtotal*appliedDiscount).toFixed(2)}</span></div>
         <div class="summary-line"><span>Tax (13%)</span><span>$${tax.toFixed(2)}</span></div>
         <div class="summary-total">Total: $${total.toFixed(2)}</div>
     `;

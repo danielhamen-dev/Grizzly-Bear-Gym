@@ -140,9 +140,7 @@
             <p>Get in touch with us.</p>
         </section>
 
-        <footer>
-            <p>&copy; 2025 Your Website Name. All Rights Reserved.</p>
-        </footer>
+        <?php echo get_footer_bar(); ?>
 
         <script src="static/home.js"></script>
     </body>
