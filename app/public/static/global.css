@@ -47,7 +47,7 @@ body {
 
 /* Main navbar layout */
 .navbar {
-    position: absolute; /* place it ON TOP of the hero image */
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
