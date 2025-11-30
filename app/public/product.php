@@ -66,7 +66,7 @@ function renderProduct(item) {
 
             <!-- LEFT: Image -->
             <div class="product-image">
-                <img src="./static/images/Grizzly Gear.png" alt="${item.name}">
+                <img src="${item.image}" alt="${item.name}">
             </div>
 
             <!-- RIGHT: Info -->

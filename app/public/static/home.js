@@ -167,9 +167,9 @@ window.addEventListener("load", () => {
           card.className = "home-item-card";
           card.innerHTML = `
             <a href="product.php?id=${item.id}">
-                <img src="./static/images/Grizzly Gear.png" alt="">
+                <img src="./static/images/products/${item.image ?? "../Grizzly Gear.png"}" alt="">
                 <h3>${item.name}</h3>
-                <p>
+                <p class="price">
                   <span ${item.sale_price ? "class='old-price'" : ""}>${item.price.toFixed(2)}</span>
                   ${item.sale_price ? `<span class="sale-price">${item.sale_price.toFixed(2)}</span>` : ""}
                 </p>

@@ -249,20 +249,6 @@ section {
         font-size: 16px;
     }
 }
-
-/* Best Sellers section */
-.best-sellers {
-    background-color: #252525;
-    padding: 60px 20px;
-    margin: 0 0 40px;
-}
-
-.best-sellers h2 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 30px;
-}
-
 /* Grid of product cards */
 .best-grid {
     display: grid;

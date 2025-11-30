@@ -215,7 +215,7 @@ require_once __DIR__ . "/var/helpers.php"; ?>
             card.className = "item-card";
             card.innerHTML = `
               <a href="product.php?id=${item.id}">
-                  <img src="./static/images/Grizzly Gear.png" alt="">
+                  <img src="${item.image}" alt="Item Image">
                   <h3>${item.name}</h3>
                   <p>
                     <span ${item.sale_price ? "class='old-price'" : ""}>${item.price.toFixed(2)}</span>

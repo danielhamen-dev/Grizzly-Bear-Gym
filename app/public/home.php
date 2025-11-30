@@ -98,47 +98,46 @@
             </div>
         </section>
 
-        <section id="best-sellers" class="best-sellers">
+        <section id="best-sellers" class="best-sellers featured-section">
             <h2>Best Sellers</h2>
             <div class="home-item-list">
             </div>
         </section>
 
-        <section id="equipment">
+        <section id="equipment" class="featured-section">
             <!-- Equipment section -->
             <h2>Our Equipment</h2>
             <div class="home-item-list"></div>
         </section>
 
-        <section id="supplements">
+        <section id="supplements" class="featured-section">
             <!-- Supplements section -->
             <h2>Supplements</h2>
             <div class="home-item-list"></div>
         </section>
 
-        <section id="accessories">
+        <section id="accessories" class="featured-section">
             <!-- Accessories section -->
             <h2>Accessories</h2>
             <div class="home-item-list"></div>
         </section>
 
-        <section id="apparel">
+        <section id="apparel" class="featured-section">
             <!-- Apparel section -->
             <h2>Apparel</h2>
             <div class="home-item-list"></div>
         </section>
 
-        <section id="about">
-            <!-- About Us section -->
+        <section id="about" class="info-section featured-section">
             <h2>About Us</h2>
-            <p>Learn more about us.</p>
+            <p>Grizzly Gear is built for athletes who demand durability, performance, and style. We create equipment and apparel that stands up to real training.</p>
         </section>
 
-        <section id="contact">
-            <!-- Contact section -->
+        <section id="contact" class="info-section featured-section">
             <h2>Contact</h2>
-            <p>Get in touch with us.</p>
+            <p>Have a question? Reach out at <a href="mailto:support@grizzlygear.com">support@grizzlygear.com</a>.</p>
         </section>
+
 
         <?php echo get_footer_bar(); ?>
 

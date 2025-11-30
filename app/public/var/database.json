@@ -1,279 +1,226 @@
 {
-    "users": [
+  "users": [
+    {
+      "id": 1,
+      "email": "test@example.com",
+      "password": "hashed_pw",
+      "cart": [
         {
-            "id": 1,
-            "email": "test@example.com",
-            "password": "hashed_pw",
-            "cart": [
-                {
-                    "id": 5,
-                    "qty": 3
-                },
-                {
-                    "id": 13,
-                    "qty": 1
-                },
-                {
-                    "id": 4,
-                    "qty": 2
-                },
-                {
-                    "id": 2,
-                    "qty": 1
-                },
-                {
-                    "id": 10,
-                    "qty": 1
-                }
-            ]
+          "id": 5,
+          "qty": 3
+        },
+        {
+          "id": 13,
+          "qty": 1
+        },
+        {
+          "id": 4,
+          "qty": 2
+        },
+        {
+          "id": 2,
+          "qty": 1
+        },
+        {
+          "id": 10,
+          "qty": 1
         }
-    ],
-    "inventory": [
-        {
-            "id": 1,
-            "name": "Grizzly T-Shirt",
-            "price": 29.99,
-            "tags": [
-                "shirt",
-                "apparel"
-            ],
-            "stock": 50,
-            "best_seller": true
-        },
-        {
-            "id": 2,
-            "name": "Grizzly Heavyweight Hoodie",
-            "price": 59.99,
-            "tags": [
-                "hoodie",
-                "apparel"
-            ],
-            "stock": 30
-        },
-        {
-            "id": 3,
-            "name": "Performance Training Shorts",
-            "price": 34.99,
-            "tags": [
-                "apparel"
-            ],
-            "stock": 40
-        },
-        {
-            "id": 4,
-            "name": "Grizzly Premium Gym Bag",
-            "price": 49.99,
-            "tags": [
-                "accessory"
-            ],
-            "stock": 25
-        },
-        {
-            "id": 5,
-            "name": "Wrist Wraps (Heavy Duty)",
-            "price": 19.99,
-            "tags": [
-                "accessory"
-            ],
-            "stock": 70
-        },
-        {
-            "id": 6,
-            "name": "Leather Weightlifting Belt",
-            "price": 44.99,
-            "tags": [
-                "accessory",
-                "equipment"
-            ],
-            "stock": 18
-        },
-        {
-            "id": 7,
-            "name": "Adjustable Dumbbells (Pair)",
-            "price": 199.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 10
-        },
-        {
-            "id": 8,
-            "name": "Resistance Band Set (5 Levels)",
-            "price": 24.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 60
-        },
-        {
-            "id": 9,
-            "name": "Protein Shaker Bottle",
-            "price": 12.99,
-            "tags": [
-                "accessory"
-            ],
-            "stock": 90
-        },
-        {
-            "id": 10,
-            "name": "Creatine Monohydrate 300g",
-            "price": 24.99,
-            "tags": [
-                "supplements"
-            ],
-            "stock": 35
-        },
-        {
-            "id": 11,
-            "name": "Whey Protein (5lb, Chocolate)",
-            "price": 59.99,
-            "tags": [
-                "supplements"
-            ],
-            "stock": 22
-        },
-        {
-            "id": 12,
-            "name": "BCAA Recovery Powder (Lemon Lime)",
-            "price": 29.99,
-            "tags": [
-                "supplements"
-            ],
-            "stock": 27
-        },
-        {
-            "id": 13,
-            "name": "Grizzly Baseball Cap",
-            "price": 19.99,
-            "tags": [
-                "accessory",
-                "apparel"
-            ],
-            "stock": 45
-        },
-        {
-            "id": 14,
-            "name": "Heavy Battle Rope (30ft)",
-            "price": 79.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 12
-        },
-        {
-            "id": 15,
-            "name": "Kettlebell 20lb",
-            "price": 34.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 25
-        },
-        {
-            "id": 16,
-            "name": "Kettlebell 35lb",
-            "price": 49.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 20
-        },
-        {
-            "id": 17,
-            "name": "Jump Rope (Speed Rope)",
-            "price": 14.99,
-            "tags": [
-                "equipment",
-                "accessory"
-            ],
-            "stock": 75
-        },
-        {
-            "id": 18,
-            "name": "Foam Roller (High Density)",
-            "price": 22.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 30
-        },
-        {
-            "id": 19,
-            "name": "Fingerless Workout Gloves",
-            "price": 16.99,
-            "tags": [
-                "accessory"
-            ],
-            "stock": 50
-        },
-        {
-            "id": 20,
-            "name": "Electrolyte Hydration Mix",
-            "price": 21.99,
-            "tags": [
-                "supplements"
-            ],
-            "stock": 33
-        },
-        {
-            "id": 21,
-            "name": "Grizzly Signature Tank Top",
-            "price": 24.99,
-            "tags": [
-                "apparel",
-                "shirt"
-            ],
-            "stock": 55
-        },
-        {
-            "id": 22,
-            "name": "Compression Leggings (Men's)",
-            "price": 39.99,
-            "sale_price": 19.99,
-            "tags": [
-                "apparel"
-            ],
-            "stock": 28
-        },
-        {
-            "id": 23,
-            "name": "Compression Long Sleeve Shirt",
-            "price": 32.99,
-            "tags": [
-                "shirt",
-                "apparel"
-            ],
-            "stock": 26
-        },
-        {
-            "id": 24,
-            "name": "Olympic Barbell (45lb)",
-            "price": 219.99,
-            "tags": [
-                "equipment"
-            ],
-            "stock": 5
-        },
-        {
-            "id": 25,
-            "name": "Barbell Collar Clips (Pair)",
-            "price": 9.99,
-            "tags": [
-                "equipment",
-                "accessory"
-            ],
-            "stock": 65
-        }
-    ],
-    "promos": [
-        {
-            "code": "BEAR10",
-            "discount": 0.1
-        },
-        {
-            "code": "NOV50",
-            "discount": 0.5
-        }
-    ],
-    "orders": []
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "id": 1,
+      "name": "T-Shirt",
+      "price": 29.99,
+      "tags": ["shirt", "apparel"],
+      "stock": 50,
+      "best_seller": true,
+      "image": "static/images/products/p1-01.png"
+    },
+    {
+      "id": 2,
+      "name": "Heavyweight Hoodie",
+      "price": 59.99,
+      "tags": ["hoodie", "apparel"],
+      "stock": 30
+    },
+    {
+      "id": 3,
+      "name": "Performance Training Shorts",
+      "price": 34.99,
+      "tags": ["apparel"],
+      "stock": 40,
+      "image": "https://ca.gymreapers.com/cdn/shop/files/training-shorts-black-front.jpg?v=1706028469&width=2048"
+    },
+    {
+      "id": 4,
+      "name": "Premium Gym Bag",
+      "price": 49.99,
+      "tags": ["accessory"],
+      "stock": 25
+    },
+    {
+      "id": 5,
+      "name": "Wrist Wraps (Heavy Duty)",
+      "price": 19.99,
+      "tags": ["accessory"],
+      "stock": 70
+    },
+    {
+      "id": 6,
+      "name": "Leather Weightlifting Belt",
+      "price": 44.99,
+      "tags": ["accessory", "equipment"],
+      "stock": 18
+    },
+    {
+      "id": 7,
+      "name": "Adjustable Dumbbells (Pair)",
+      "price": 199.99,
+      "tags": ["equipment"],
+      "stock": 10
+    },
+    {
+      "id": 8,
+      "name": "Resistance Band Set (5 Levels)",
+      "price": 24.99,
+      "tags": ["equipment"],
+      "stock": 60
+    },
+    {
+      "id": 9,
+      "name": "Protein Shaker Bottle",
+      "price": 12.99,
+      "tags": ["accessory"],
+      "stock": 90
+    },
+    {
+      "id": 10,
+      "name": "Creatine Monohydrate 300g",
+      "price": 24.99,
+      "tags": ["supplements"],
+      "stock": 35
+    },
+    {
+      "id": 11,
+      "name": "Whey Protein (5lb, Chocolate)",
+      "price": 59.99,
+      "tags": ["supplements"],
+      "stock": 22
+    },
+    {
+      "id": 12,
+      "name": "BCAA Recovery Powder (Lemon Lime)",
+      "price": 29.99,
+      "tags": ["supplements"],
+      "stock": 27
+    },
+    {
+      "id": 13,
+      "name": "Baseball Cap",
+      "price": 19.99,
+      "tags": ["accessory", "apparel"],
+      "stock": 45,
+      "image": "https://i5.walmartimages.com/seo/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF"
+    },
+    {
+      "id": 14,
+      "name": "Heavy Battle Rope (30ft)",
+      "price": 79.99,
+      "tags": ["equipment"],
+      "stock": 12
+    },
+    {
+      "id": 15,
+      "name": "Kettlebell 20lb",
+      "price": 34.99,
+      "tags": ["equipment"],
+      "stock": 25
+    },
+    {
+      "id": 16,
+      "name": "Kettlebell 35lb",
+      "price": 49.99,
+      "tags": ["equipment"],
+      "stock": 20
+    },
+    {
+      "id": 17,
+      "name": "Jump Rope (Speed Rope)",
+      "price": 14.99,
+      "tags": ["equipment", "accessory"],
+      "stock": 75
+    },
+    {
+      "id": 18,
+      "name": "Foam Roller (High Density)",
+      "price": 22.99,
+      "tags": ["equipment"],
+      "stock": 30
+    },
+    {
+      "id": 19,
+      "name": "Fingerless Workout Gloves",
+      "price": 16.99,
+      "tags": ["accessory"],
+      "stock": 50
+    },
+    {
+      "id": 20,
+      "name": "Electrolyte Hydration Mix",
+      "price": 21.99,
+      "tags": ["supplements"],
+      "stock": 33
+    },
+    {
+      "id": 21,
+      "name": "Signature Tank Top",
+      "price": 24.99,
+      "tags": ["apparel", "shirt"],
+      "stock": 55
+    },
+    {
+      "id": 22,
+      "name": "Compression Leggings (Men's)",
+      "price": 39.99,
+      "sale_price": 19.99,
+      "tags": ["apparel"],
+      "stock": 28,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s"
+    },
+    {
+      "id": 23,
+      "name": "Compression Long Sleeve Shirt",
+      "price": 32.99,
+      "tags": ["shirt", "apparel"],
+      "stock": 26
+    },
+    {
+      "id": 24,
+      "name": "Olympic Barbell (45lb)",
+      "price": 219.99,
+      "tags": ["equipment"],
+      "stock": 5,
+      "image": "https://m.media-amazon.com/images/I/51r75wdVeZL.jpg"
+    },
+    {
+      "id": 25,
+      "name": "Barbell Collar Clips (Pair)",
+      "price": 9.99,
+      "tags": ["equipment", "accessory"],
+      "stock": 65
+    }
+  ],
+  "promos": [
+    {
+      "code": "BEAR10",
+      "discount": 0.1
+    },
+    {
+      "code": "NOV50",
+      "discount": 0.5
+    }
+  ],
+  "orders": []
 }
