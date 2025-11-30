@@ -126,5 +126,6 @@ function renderProduct(item) {
 })();
 </script>
 
+<?php echo get_footer_bar(); ?>
 </body>
 </html>

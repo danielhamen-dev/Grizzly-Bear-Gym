@@ -39,8 +39,8 @@ function get_footer_bar()
             <div class="footer-col footer-brand">
                 <img src="./static/images/Grizzly Gear.png" class="footer-logo" alt="Grizzly Gear">
                 <p class="footer-desc">
-                    Strength that stands tall. Premium gym equipment, supplements, and apparel.
-                    Join the community and level up your grind.
+                    "Strength that stands tall. Premium gym equipment, supplements, and apparel.
+                    Join the community and level up your grind." (ChatGPT)
                 </p>
 
                 <div class="footer-social">

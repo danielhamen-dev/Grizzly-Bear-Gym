@@ -287,5 +287,6 @@ require_once __DIR__ . "/var/helpers.php"; ?>
 
 
 
+    <?php echo get_footer_bar(); ?>
 </body>
 </html>
