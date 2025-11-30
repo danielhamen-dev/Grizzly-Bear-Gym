@@ -116,6 +116,27 @@ header.scrolled {
     font-size: 1.5em;
 }
 
+.nav-right > a {
+    position: relative;
+}
+
+.nav-right > a > .cart-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    font-size: 0.8rem;
+    min-width: 0;
+    color: white;
+    transform: translate(50%, -100%);
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 0, 0, 0.8);
+    border-radius: 999px;
+    text-align: center;
+    outline: 2px solid black;
+}
+
 /* Mobile layout tweaks */
 @media (max-width: 768px) {
     header {
@@ -514,4 +535,77 @@ select:hover {
 
 select:focus {
     border-color: black;
+}
+/* --------------------------------------------- */
+/* Product Cards                                  */
+/* --------------------------------------------- */
+
+.item-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-card > a {
+    text-decoration: inherit;
+    color: inherit;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+.item-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.item-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.item-card p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.item-card button {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: white;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.15s;
+    margin-top: auto;
+}
+
+.item-card button:hover {
+    background: #333;
+}
+
+.item-card .old-price {
+    text-decoration: line-through;
+    opacity: 75%;
+}
+
+.item-card .sale-price {
+    font-weight: bold;
 }

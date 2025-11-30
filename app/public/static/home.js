@@ -54,7 +54,7 @@ function closeModal() {
   }, 180);
 }
 
-// Focus trap (basic)
+// Focus trap (basic)f
 function onKeydown(e) {
   if (e.key === "Escape") {
     closeModal();
@@ -120,21 +120,72 @@ form.addEventListener("submit", (e) => {
   }, 800);
 });
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
-  if (window.scrollY > 50) {
-    header.classList.add("shrink-logo");
-  } else {
-    header.classList.remove("shrink-logo");
-  }
-});
+// ---------------------
+// Add Best Sellers & Featured Content
+window.addEventListener("load", () => {
+  fetch("../var/main.php?action=inventory").then((resp) =>
+    resp.json().then((inventory) => {
+      const bestSellers = [];
+      const apparel = [];
+      const equipment = [];
+      const supplements = [];
+      const accessories = [];
 
-window.addEventListener("scroll", () => {
-  const header = document.querySelector("header");
+      inventory.forEach((item) => {
+        const itemTags = item.tags;
 
-  if (window.scrollY > 50) {
-    header.classList.add("shrink-logo", "scrolled");
-  } else {
-    header.classList.remove("shrink-logo", "scrolled");
-  }
+        // item is best seller
+        if (item.best_seller === true) {
+          bestSellers.push(item);
+        }
+
+        //
+        itemTags.forEach((tag) => {
+          switch (tag) {
+            case "apparel":
+              apparel.push(item);
+              break;
+            case "equipment":
+              equipment.push(item);
+              break;
+            case "supplements":
+              supplements.push(item);
+              break;
+            case "accessory":
+              accessories.push(item);
+              break;
+          }
+        });
+      });
+
+      // populate elems
+      const populate = (idname, list) => {
+        list = list.slice(0, 5);
+        const itemList = document.querySelector(`#${idname}>.home-item-list`);
+        list.forEach((item) => {
+          const card = document.createElement("div");
+          card.className = "home-item-card";
+          card.innerHTML = `
+            <a href="product.php?id=${item.id}">
+                <img src="./static/images/Grizzly Gear.png" alt="">
+                <h3>${item.name}</h3>
+                <p>
+                  <span ${item.sale_price ? "class='old-price'" : ""}>${item.price.toFixed(2)}</span>
+                  ${item.sale_price ? `<span class="sale-price">${item.sale_price.toFixed(2)}</span>` : ""}
+                </p>
+                <!--<p>Stock: ${item.stock}</p>-->
+                <!--<button onclick="addToCart(${item.id})">Add to Cart</button>-->
+            </a>
+          `;
+          itemList.appendChild(card);
+        });
+      };
+
+      populate("best-sellers", bestSellers);
+      populate("equipment", equipment);
+      populate("supplements", supplements);
+      populate("accessories", accessories);
+      populate("apparel", apparel);
+    }),
+  );
 });

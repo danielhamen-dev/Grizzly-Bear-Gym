@@ -214,14 +214,16 @@ require_once __DIR__ . "/var/helpers.php"; ?>
             const card = document.createElement("div");
             card.className = "item-card";
             card.innerHTML = `
-                <img src="./static/images/Grizzly Gear.png" alt="">
-                <h3>${item.name}</h3>
-                <p>
-                  <span ${item.sale_price ? "class='old-price'" : ""}>${item.price.toFixed(2)}</span>
-                  ${item.sale_price ? `<span class="sale-price">${item.sale_price.toFixed(2)}</span>` : ""}
-                </p>
-                <p>Stock: ${item.stock}</p>
-                <button onclick="addToCart(${item.id})">Add to Cart</button>
+              <a href="product.php?id=${item.id}">
+                  <img src="./static/images/Grizzly Gear.png" alt="">
+                  <h3>${item.name}</h3>
+                  <p>
+                    <span ${item.sale_price ? "class='old-price'" : ""}>${item.price.toFixed(2)}</span>
+                    ${item.sale_price ? `<span class="sale-price">${item.sale_price.toFixed(2)}</span>` : ""}
+                  </p>
+                  <p>Stock: ${item.stock}</p>
+                  <button onclick="addToCart(${item.id})">Add to Cart</button>
+              </a>
             `;
             grid.appendChild(card);
         }
@@ -245,8 +247,26 @@ require_once __DIR__ . "/var/helpers.php"; ?>
     // Add to Cart
     // -----------------------------------------------------------
     function addToCart(id) {
-        alert("Item " + id + " added to cart (demo mode)");
-    }
+      const USER_ID = localStorage.getItem("user_id") || 1;
+
+      fetch("../var/main.php?action=add_to_cart", {
+          method: "POST",
+          body: new URLSearchParams({
+              user_id: USER_ID,
+              id: id,
+              qty: 1
+          })
+      })
+      .then(r => r.json())
+      .then(data => {
+          if (data.success) {
+              alert("Successfully added to cart!");
+          } else {
+              alert("Error: " + data.msg);
+          }
+      }).finally(() => syncNCartItems());
+   }
+
 
     // -----------------------------------------------------------
     // Init

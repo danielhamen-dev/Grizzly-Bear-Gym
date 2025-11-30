@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Home &bull; Grizzly Bear Gym</title>
         <link rel="stylesheet" href="./static/global.css" />
+        <link rel="stylesheet" href="./static/home.css" />
 
         <!--Google Icons-->
         <link
@@ -99,59 +100,32 @@
 
         <section id="best-sellers" class="best-sellers">
             <h2>Best Sellers</h2>
-            <div class="best-grid">
-                <div class="product-card">
-                    <div class="product-img-placeholder">Image</div>
-                    <h3>Adjustable Dumbbells</h3>
-                    <p class="price">$199.99</p>
-                    <button class="product-btn">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-placeholder">Image</div>
-                    <h3>Heavy Duty Lifting Belt</h3>
-                    <p class="price">$59.99</p>
-                    <button class="product-btn">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-placeholder">Image</div>
-                    <h3>Pre-Workout Fury Mix</h3>
-                    <p class="price">$39.99</p>
-                    <button class="product-btn">Add to Cart</button>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-img-placeholder">Image</div>
-                    <h3>Compression Tee</h3>
-                    <p class="price">$29.99</p>
-                    <button class="product-btn">Add to Cart</button>
-                </div>
+            <div class="home-item-list">
             </div>
         </section>
 
         <section id="equipment">
             <!-- Equipment section -->
             <h2>Our Equipment</h2>
-            <p>Browse the best gym equipment.</p>
+            <div class="home-item-list"></div>
         </section>
 
         <section id="supplements">
             <!-- Supplements section -->
             <h2>Supplements</h2>
-            <p>Explore high-quality supplements.</p>
+            <div class="home-item-list"></div>
         </section>
 
         <section id="accessories">
             <!-- Accessories section -->
             <h2>Accessories</h2>
-            <p>Get your fitness gear essentials.</p>
+            <div class="home-item-list"></div>
         </section>
 
         <section id="apparel">
             <!-- Apparel section -->
             <h2>Apparel</h2>
-            <p>Shop for gym clothing and gear.</p>
+            <div class="home-item-list"></div>
         </section>
 
         <section id="about">

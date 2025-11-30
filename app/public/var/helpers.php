@@ -23,6 +23,7 @@ function get_nav_bar()
                     <span class="icon" alt="Shopping Cart">
                         shopping_cart
                     </span>
+                    <span id="cart-number-of-items" class="cart-items">-</span>
                 </a>
             </div>
         </nav>

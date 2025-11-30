@@ -4,7 +4,16 @@
             "id": 1,
             "email": "test@example.com",
             "password": "hashed_pw",
-            "cart": []
+            "cart": [
+                {
+                    "id": 5,
+                    "qty": 2
+                },
+                {
+                    "id": 13,
+                    "qty": 1
+                }
+            ]
         }
     ],
     "inventory": [
@@ -16,7 +25,8 @@
                 "shirt",
                 "apparel"
             ],
-            "stock": 50
+            "stock": 50,
+            "best_seller": true
         },
         {
             "id": 2,

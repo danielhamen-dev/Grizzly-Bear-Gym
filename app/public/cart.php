@@ -251,6 +251,7 @@ document.addEventListener("click", async (e) => {
     });
 
     loadCart();
+    syncNCartItems();
 });
 
 // ------------------------------------------------------------
