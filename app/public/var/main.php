@@ -116,6 +116,129 @@ switch ($action) {
         respond(["valid" => false]);
 
     // -----------------------------------------------------------
+    // CART
+    // -----------------------------------------------------------
+    case "get_cart":
+        $user_id = intval($_GET["user_id"] ?? 0);
+
+        foreach ($db["users"] as $u) {
+            if ($u["id"] === $user_id) {
+                respond(["success" => true, "cart" => $u["cart"] ?? []]);
+            }
+        }
+        respond(["success" => false, "msg" => "User not found"]);
+
+    case "remove_from_cart":
+        $user_id = intval($_POST["user_id"] ?? 0);
+        $item_id = intval($_POST["id"] ?? 0);
+
+        if ($user_id === 0 || $item_id === 0) {
+            respond(["success" => false, "msg" => "Invalid data"]);
+        }
+
+        foreach ($db["users"] as &$u) {
+            if ($u["id"] === $user_id) {
+                // If cart is missing, nothing to remove
+                if (!isset($u["cart"]) || !is_array($u["cart"])) {
+                    respond(["success" => false, "msg" => "Cart empty"]);
+                }
+
+                // Try to remove item
+                foreach ($u["cart"] as $i => $ci) {
+                    if ($ci["id"] === $item_id) {
+                        array_splice($u["cart"], $i, 1);
+                        save_db($db);
+
+                        respond(["success" => true, "cart" => $u["cart"]]);
+                    }
+                }
+
+                respond(["success" => false, "msg" => "Item not in cart"]);
+            }
+        }
+
+        respond(["success" => false, "msg" => "User not found"]);
+
+    case "add_to_cart":
+        $user_id = intval($_POST["user_id"] ?? 0);
+        $item_id = intval($_POST["id"] ?? 0);
+        $qty = intval($_POST["qty"] ?? 1);
+
+        if ($user_id === 0 || $item_id === 0 || $qty <= 0) {
+            respond(["success" => false, "msg" => "Invalid data"]);
+        }
+
+        // Validate item exists
+        $itemExists = false;
+        foreach ($db["inventory"] as $inv) {
+            if ($inv["id"] === $item_id) {
+                $itemExists = true;
+                break;
+            }
+        }
+        if (!$itemExists) {
+            respond(["success" => false, "msg" => "Item not found"]);
+        }
+
+        // Update user cart
+        foreach ($db["users"] as &$u) {
+            if ($u["id"] === $user_id) {
+                if (!isset($u["cart"])) {
+                    $u["cart"] = [];
+                }
+
+                // Check if item already exists
+                $found = false;
+                foreach ($u["cart"] as &$ci) {
+                    if ($ci["id"] === $item_id) {
+                        $ci["qty"] += $qty;
+                        $found = true;
+                        break;
+                    }
+                }
+
+                if (!$found) {
+                    $u["cart"][] = ["id" => $item_id, "qty" => $qty];
+                }
+
+                save_db($db);
+                respond(["success" => true, "cart" => $u["cart"]]);
+            }
+        }
+
+        respond(["success" => false, "msg" => "User not found"]);
+
+    case "update_cart_qty":
+        $user_id = intval($_POST["user_id"] ?? 0);
+        $item_id = intval($_POST["id"] ?? 0);
+        $qty = intval($_POST["qty"] ?? -1);
+
+        if ($user_id === 0 || $item_id === 0 || $qty < 0) {
+            respond(["success" => false, "msg" => "Invalid data"]);
+        }
+
+        foreach ($db["users"] as &$u) {
+            if ($u["id"] === $user_id) {
+                foreach ($u["cart"] as $i => &$ci) {
+                    if ($ci["id"] === $item_id) {
+                        if ($qty === 0) {
+                            array_splice($u["cart"], $i, 1); // remove
+                        } else {
+                            $ci["qty"] = $qty;
+                        }
+
+                        save_db($db);
+                        respond(["success" => true, "cart" => $u["cart"]]);
+                    }
+                }
+
+                respond(["success" => false, "msg" => "Item not in cart"]);
+            }
+        }
+
+        respond(["success" => false, "msg" => "User not found"]);
+
+    // -----------------------------------------------------------
     // CHECKOUT
     // -----------------------------------------------------------
     case "checkout":

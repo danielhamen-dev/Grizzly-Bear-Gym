@@ -1,0 +1,197 @@
+/* --------------------------------------------- */
+/* Layout                                         */
+/* --------------------------------------------- */
+
+#shop-content {
+    width: 100%;
+    padding: 30px 0;
+    height: 100%;
+    overflow: scroll;
+    max-height: 100vh;
+}
+
+.shop-details {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    max-width: 1500px;
+    /*padding: 8px 0;*/
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+/* --------------------------------------------- */
+/* Left Panel (Filters)                           */
+/* --------------------------------------------- */
+
+.shop-prefs {
+    width: 260px;
+    background: #f5f5f5;
+    padding: 20px 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+.shop-title {
+    margin: 18px 0 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #111;
+}
+
+/* --------------------------------------------- */
+/* Search bar                                     */
+/* --------------------------------------------- */
+
+.search-row {
+    max-width: 1500px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.search-row input {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #fafafa;
+    transition: 0.2s;
+}
+
+.search-row input:focus {
+    border-color: black;
+}
+
+/* --------------------------------------------- */
+/* Tags                                            */
+/* --------------------------------------------- */
+
+.tags-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.tag {
+    display: flex;
+    gap: 4px;
+    padding: 10px 14px;
+    background: #e5e5e5;
+    color: #333;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.15s;
+    border: 1px solid transparent;
+}
+
+.tag:hover {
+    background: #dcdcdc;
+}
+
+.tag.active {
+    background: #000;
+    color: white;
+    border-color: #000;
+}
+
+.tag .icon {
+    display: none;
+}
+
+.tag:not(.active) .icon.disabled {
+    display: inline;
+}
+
+.tag.active .icon.enabled {
+    display: inline;
+}
+
+/* --------------------------------------------- */
+/* Product Grid                                   */
+/* --------------------------------------------- */
+
+.shop-container {
+    flex: 1;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 26px;
+}
+
+/* --------------------------------------------- */
+/* Product Cards                                  */
+/* --------------------------------------------- */
+
+.item-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.item-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    background: #f0f0f0;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.item-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+    color: #111;
+}
+
+.item-card p {
+    margin: 2px 0;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.item-card button {
+    margin-top: auto;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: white;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+.item-card button:hover {
+    background: #333;
+}
+
+.item-card .old-price {
+    text-decoration: line-through;
+    opacity: 75%;
+}
+
+.item-card .sale-price {
+    font-weight: bold;
+}

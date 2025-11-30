@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . "/var/helpers.php"; ?>
 <!doctype html>
 <html lang="en">
     <head>
@@ -83,31 +84,8 @@
         </div>
 
         <section id="home" class="hero-section">
-            <!-- NAVBAR OVER HERO IMAGE -->
-            <nav class="navbar">
-                <ul class="nav-left">
-                    <li><a href="home.php">Home</a></li>
-                    <li><a href="shop.php#equipment">Equipment</a></li>
-                    <li><a href="shop.php#supplements">Supplements</a></li>
-                    <li><a href="shop.php#accessories">Accessories</a></li>
-                    <li><a href="shop.php#apparel">Apparel</a></li>
-                </ul>
-
-                <div class="logo-center">
-                    <img
-                        src="static/images/Grizzly Gear.png"
-                        alt="The Grizzly Den Logo"
-                    />
-                </div>
-
-                <div class="nav-right">
-                    <a href="#cart" class="cart-link">
-                        <span class="icon" alt="Shopping Cart">
-                            shopping_cart
-                        </span>
-                    </a>
-                </div>
-            </nav>
+            <!--navbar-->
+            <?php echo get_nav_bar(); ?>
 
             <!-- HERO IMAGE + TEXT -->
             <div class="hero-content">
