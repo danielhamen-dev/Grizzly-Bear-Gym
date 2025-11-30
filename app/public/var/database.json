@@ -65,14 +65,16 @@
       "name": "Wrist Wraps (Heavy Duty)",
       "price": 19.99,
       "tags": ["accessory"],
-      "stock": 70
+      "stock": 70,
+      "image": "https://www.xtcfitness.ca/cdn/shop/files/xtc-gear-x-series-padded-grippy-lifting-straps-blue-lifting-straps-xs-pgls-blue-83583573-xtc-gear-42253815152947.jpg?v=1694558120&width=1024"
     },
     {
       "id": 6,
       "name": "Leather Weightlifting Belt",
       "price": 44.99,
       "tags": ["accessory", "equipment"],
-      "stock": 18
+      "stock": 18,
+      "image": "https://au.gymreapers.com/cdn/shop/files/7mm-belt-black-front-angle.jpg?v=1715630030&width=2000"
     },
     {
       "id": 7,
