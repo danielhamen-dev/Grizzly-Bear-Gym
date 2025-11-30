@@ -8,6 +8,7 @@
     <title>Grizzly Gear Shop</title>
     <link rel="stylesheet" href="./static/global.css">
 
+
     <!--Google Icons-->
     <link
         rel="stylesheet"
@@ -56,12 +57,12 @@
 
     <div class="shop-container">
 
-        <!-- Search Bar -->
+        <!-- search -->
         <div class="search-row">
             <input id="searchBox" type="text" placeholder="Search products…">
         </div>
 
-        <!-- Tag Filters -->
+        <!-- tags -->
         <div class="tags-row">
             <div class="tag" data-tag="shirt">Shirts</div>
             <div class="tag" data-tag="hoodie">Hoodies</div>
@@ -69,116 +70,156 @@
             <div class="tag" data-tag="equipment">Equipment</div>
         </div>
 
-        <!-- Inventory Items -->
-        <div class="item-grid" id="itemGrid">
-            <!-- Items injected via JS -->
-        </div>
+        <!-- items -->
+        <div class="item-grid" id="itemGrid"></div>
     </div>
 
-<script>
-// -----------------------------------------------------------
-// Load inventory from backend
-// -----------------------------------------------------------
+    <script>
+    // -----------------------------------------------------------
+    // URL + tag helpers
+    // -----------------------------------------------------------
 
-let fullInventory = [];
-let activeTags = new Set();
+    let fullInventory = [];
+    let activeTags = new Set();
 
-async function loadInventory() {
-    const r = await fetch("../var/main.php?action=inventory");
-    fullInventory = await r.json();
-    renderItems();
-}
+    // Read tags from ?tag=accessories,equipment
+    function initTagsFromURL() {
+        const url = new URL(window.location.href);
+        const tagParam = url.searchParams.get("tag");
 
-// -----------------------------------------------------------
-// Render items
-// -----------------------------------------------------------
+        if (!tagParam) return;
 
-function renderItems() {
-    const grid = document.getElementById("itemGrid");
-    grid.innerHTML = "";
-
-    const searchText = document.getElementById("searchBox").value.toLowerCase();
-
-    const show = fullInventory.filter(item => {
-        // Search filter
-        const matchesSearch = item.name.toLowerCase().includes(searchText);
-
-        // Tag filter
-        const matchesTags =
-            activeTags.size === 0 ||                      // no tags → allow all
-            Array.from(activeTags).some(tag =>            // at least one tag must match
-                item.tags.includes(tag)
-            );
-
-        return matchesSearch && matchesTags;
-    });
-
-    if (show.length === 0) {
-        grid.innerHTML = "<p>No products found.</p>";
-        return;
+        tagParam.split(",").forEach(t => {
+            const tag = t.trim();
+            if (tag) activeTags.add(tag);
+        });
     }
 
-    for (let item of show) {
-        const card = document.createElement("div");
-        card.className = "item-card";
+    // Write tags back to ?tag=... in URL (no reload)
+    function updateURLFromTags() {
+        const url = new URL(window.location.href);
 
-        const imgSrc = "./static/images/Grizzly Gear.png";
-
-        card.innerHTML = `
-            <img src="${imgSrc}" alt="Item">
-            <h3>${item.name}</h3>
-            <p>$${item.price.toFixed(2)}</p>
-            <p>Stock: ${item.stock}</p>
-            <button onclick="addToCart(${item.id})">Add to Cart</button>
-        `;
-
-        grid.appendChild(card);
-    }
-}
-
-
-// -----------------------------------------------------------
-// Tag Filtering
-// -----------------------------------------------------------
-
-document.querySelectorAll(".tag").forEach(tagEl => {
-    tagEl.addEventListener("click", () => {
-        const tag = tagEl.dataset.tag;
-
-        if (tagEl.classList.contains("active")) {
-            tagEl.classList.remove("active");
-            activeTags.delete(tag);
+        if (activeTags.size === 0) {
+            url.searchParams.delete("tag");
         } else {
-            tagEl.classList.add("active");
-            activeTags.add(tag);
+            url.searchParams.set("tag", [...activeTags].join(","));
         }
 
+        window.history.replaceState({}, "", url);
+    }
+
+    // Highlight tag buttons based on activeTags
+    function syncTagUI() {
+        document.querySelectorAll(".tag").forEach(tagEl => {
+            const tag = tagEl.dataset.tag;
+            if (activeTags.has(tag)) {
+                tagEl.classList.add("active");
+            } else {
+                tagEl.classList.remove("active");
+            }
+        });
+    }
+
+    // -----------------------------------------------------------
+    // Load inventory
+    // -----------------------------------------------------------
+
+    async function loadInventory() {
+        initTagsFromURL();        // set activeTags from URL first
+
+        const r = await fetch("../var/main.php?action=inventory");
+        fullInventory = await r.json();
+
+        syncTagUI();
         renderItems();
+    }
+
+    // -----------------------------------------------------------
+    // Render items
+    // -----------------------------------------------------------
+
+    function renderItems() {
+        const grid = document.getElementById("itemGrid");
+        grid.innerHTML = "";
+
+        const searchText = document.getElementById("searchBox").value.toLowerCase();
+
+        const show = fullInventory.filter(item => {
+            // Search
+            const matchesSearch = item.name.toLowerCase().includes(searchText);
+
+            // Tags
+            const matchesTags =
+                activeTags.size === 0 ||
+                [...activeTags].some(tag => item.tags.includes(tag));
+
+            return matchesSearch && matchesTags;
+        });
+
+        if (show.length === 0) {
+            grid.innerHTML = "<p>No products found.</p>";
+            return;
+        }
+
+        for (let item of show) {
+            const card = document.createElement("div");
+            card.className = "item-card";
+
+            const imgSrc = "./static/images/Grizzly Gear.png";
+
+            card.innerHTML = `
+                <img src="${imgSrc}" alt="Item">
+                <h3>${item.name}</h3>
+                <p>$${item.price.toFixed(2)}</p>
+                <p>Stock: ${item.stock}</p>
+                <button onclick="addToCart(${item.id})">Add to Cart</button>
+            `;
+
+            grid.appendChild(card);
+        }
+    }
+
+    // -----------------------------------------------------------
+    // Tag click handlers
+    // -----------------------------------------------------------
+
+    document.querySelectorAll(".tag").forEach(tagEl => {
+        tagEl.addEventListener("click", () => {
+            const tag = tagEl.dataset.tag;
+
+            if (activeTags.has(tag)) {
+                activeTags.delete(tag);
+            } else {
+                activeTags.add(tag);
+            }
+
+            syncTagUI();
+            updateURLFromTags();
+            renderItems();
+        });
     });
-});
 
-// -----------------------------------------------------------
-// Search
-// -----------------------------------------------------------
+    // -----------------------------------------------------------
+    // Search
+    // -----------------------------------------------------------
 
-document.getElementById("searchBox").addEventListener("input", renderItems);
+    document.getElementById("searchBox").addEventListener("input", renderItems);
 
-// -----------------------------------------------------------
-// Add to Cart
-// -----------------------------------------------------------
+    // -----------------------------------------------------------
+    // Add to Cart
+    // -----------------------------------------------------------
 
-function addToCart(id) {
-    // For your school project: simple placeholder
-    alert("Item " + id + " added to cart (demo mode)");
-}
+    function addToCart(id) {
+        alert("Item " + id + " added to cart (demo mode)");
+    }
 
-// -----------------------------------------------------------
-// Init page
-// -----------------------------------------------------------
+    // -----------------------------------------------------------
+    // Init page
+    // -----------------------------------------------------------
 
-loadInventory();
+    loadInventory();
+    </script>
 
-</script>
 
 </body>
 </html>

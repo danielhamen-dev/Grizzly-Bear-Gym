@@ -3,7 +3,8 @@
     {
       "id": 1,
       "email": "test@example.com",
-      "password": "hashed_pw"
+      "password": "hashed_pw",
+      "cart": [{ "id": 1, "qty": 5 }]
     }
   ],
   "inventory": [
