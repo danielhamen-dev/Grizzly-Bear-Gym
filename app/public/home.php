@@ -102,30 +102,35 @@
             <h2>Best Sellers</h2>
             <div class="home-item-list">
             </div>
+            <a href="shop.php" class="view-more">View More</a>
         </section>
 
         <section id="equipment" class="featured-section">
             <!-- Equipment section -->
             <h2>Our Equipment</h2>
             <div class="home-item-list"></div>
+            <a href="shop.php" class="view-more">View More</a>
         </section>
 
         <section id="supplements" class="featured-section">
             <!-- Supplements section -->
             <h2>Supplements</h2>
             <div class="home-item-list"></div>
+            <a href="shop.php" class="view-more">View More</a>
         </section>
 
         <section id="accessories" class="featured-section">
             <!-- Accessories section -->
             <h2>Accessories</h2>
             <div class="home-item-list"></div>
+            <a href="shop.php" class="view-more">View More</a>
         </section>
 
         <section id="apparel" class="featured-section">
             <!-- Apparel section -->
             <h2>Apparel</h2>
             <div class="home-item-list"></div>
+            <a href="shop.php" class="view-more">View More</a>
         </section>
 
         <section id="about" class="info-section featured-section">

@@ -160,7 +160,7 @@ window.addEventListener("load", () => {
 
       // populate elems
       const populate = (idname, list) => {
-        list = list.slice(0, 5);
+        list = list.slice(0, 4);
         const itemList = document.querySelector(`#${idname}>.home-item-list`);
         list.forEach((item) => {
           const card = document.createElement("div");

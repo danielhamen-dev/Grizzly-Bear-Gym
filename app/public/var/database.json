@@ -1,226 +1,295 @@
 {
-  "users": [
-    {
-      "id": 1,
-      "email": "test@example.com",
-      "password": "hashed_pw",
-      "cart": [
+    "users": [
         {
-          "id": 24,
-          "qty": 4
+            "id": 1,
+            "email": "test@example.com",
+            "password": "hashed_pw",
+            "cart": [
+                {
+                    "id": 1,
+                    "qty": 1
+                }
+            ]
         }
-      ]
-    }
-  ],
-  "inventory": [
-    {
-      "id": 1,
-      "name": "T-Shirt",
-      "price": 29.99,
-      "tags": ["shirt", "apparel"],
-      "stock": 50,
-      "best_seller": true
-    },
-    {
-      "id": 2,
-      "name": "Heavyweight Hoodie",
-      "price": 59.99,
-      "tags": ["hoodie", "apparel"],
-      "stock": 30
-    },
-    {
-      "id": 3,
-      "name": "Performance Training Shorts",
-      "price": 34.99,
-      "tags": ["apparel"],
-      "stock": 40,
-      "image": "https:\/\/ca.gymreapers.com\/cdn\/shop\/files\/training-shorts-black-front.jpg?v=1706028469&width=2048",
-      "best_seller": true
-    },
-    {
-      "id": 4,
-      "name": "Premium Gym Bag",
-      "price": 49.99,
-      "tags": ["accessory"],
-      "stock": 25
-    },
-    {
-      "id": 5,
-      "name": "Wrist Wraps (Heavy Duty)",
-      "price": 19.99,
-      "tags": ["accessory"],
-      "stock": 70,
-      "image": "https:\/\/www.xtcfitness.ca\/cdn\/shop\/files\/xtc-gear-x-series-padded-grippy-lifting-straps-blue-lifting-straps-xs-pgls-blue-83583573-xtc-gear-42253815152947.jpg?v=1694558120&width=1024"
-    },
-    {
-      "id": 6,
-      "name": "Leather Weightlifting Belt",
-      "price": 44.99,
-      "tags": ["accessory", "equipment"],
-      "stock": 18,
-      "image": "https:\/\/au.gymreapers.com\/cdn\/shop\/files\/7mm-belt-black-front-angle.jpg?v=1715630030&width=2000"
-    },
-    {
-      "id": 7,
-      "name": "Adjustable Dumbbells (Pair)",
-      "price": 199.99,
-      "tags": ["equipment"],
-      "stock": 10,
-      "image": "https:\/\/m.media-amazon.com\/images\/I\/71dBSTcp9cL._AC_UF894,1000_QL80_.jpg"
-    },
-    {
-      "id": 8,
-      "name": "Resistance Band Set (5 Levels)",
-      "price": 24.99,
-      "tags": ["equipment"],
-      "stock": 60,
-      "image": "https:\/\/i5.walmartimages.com\/asr\/267ce117-1723-4077-bccf-4c873deff6be.0b04f525be9b3c9ef665728f33547c6c.jpeg"
-    },
-    {
-      "id": 9,
-      "name": "Protein Shaker Bottle",
-      "price": 12.99,
-      "tags": ["accessory"],
-      "stock": 90,
-      "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRHwTbuJIZ6G80ePpW2TdNg-2v98Qxu0oXTaw&s"
-    },
-    {
-      "id": 10,
-      "name": "Creatine Monohydrate 300g",
-      "price": 24.99,
-      "tags": ["supplements"],
-      "stock": 35,
-      "image": "https:\/\/media.supplementking.ca\/catalog\/product\/cache\/c7b67f1ce99d1caa405d0fe7ed968970\/o\/n\/on_creatine_300g.jpg"
-    },
-    {
-      "id": 11,
-      "name": "Whey Protein (5lb, Chocolate)",
-      "price": 59.99,
-      "tags": ["supplements"],
-      "stock": 22,
-      "image": "https:\/\/www.healthyplanetcanada.com\/media\/catalog\/product\/e\/x\/extreme-milk-chocolate.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=500&canvas=500:400"
-    },
-    {
-      "id": 12,
-      "name": "BCAA Recovery Powder (Lemon Lime)",
-      "price": 29.99,
-      "tags": ["supplements"],
-      "stock": 27,
-      "image": "https:\/\/cloudinary.images-iherb.com\/image\/upload\/f_auto,q_auto:eco\/images\/sci\/sci00021\/l\/51.jpg"
-    },
-    {
-      "id": 13,
-      "name": "Baseball Cap",
-      "price": 19.99,
-      "tags": ["accessory", "apparel"],
-      "stock": 45,
-      "image": "https:\/\/i5.walmartimages.com\/seo\/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF",
-      "best_seller": true
-    },
-    {
-      "id": 14,
-      "name": "Heavy Battle Rope (30ft)",
-      "price": 79.99,
-      "tags": ["equipment"],
-      "stock": 12
-    },
-    {
-      "id": 15,
-      "name": "Kettlebell 20lb",
-      "price": 34.99,
-      "tags": ["equipment"],
-      "stock": 25
-    },
-    {
-      "id": 16,
-      "name": "Kettlebell 35lb",
-      "price": 49.99,
-      "tags": ["equipment"],
-      "stock": 20
-    },
-    {
-      "id": 17,
-      "name": "Jump Rope (Speed Rope)",
-      "price": 14.99,
-      "tags": ["equipment", "accessory"],
-      "stock": 75
-    },
-    {
-      "id": 18,
-      "name": "Foam Roller (High Density)",
-      "price": 22.99,
-      "tags": ["equipment"],
-      "stock": 30,
-      "image": "https://www.performancehealth.ca/media/catalog/product/6/1/6126vho0ycl._ac_sl1350_.jpg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
-    },
-    {
-      "id": 19,
-      "name": "Fingerless Workout Gloves",
-      "price": 16.99,
-      "tags": ["accessory"],
-      "stock": 50,
-      "image": "https://i5.walmartimages.com/asr/1ae80ac4-2c49-4470-8ee8-18be3b08c2d5.c24ed607a0ca8933828a69fda5b368e6.jpeg"
-    },
-    {
-      "id": 20,
-      "name": "Electrolyte Hydration Mix",
-      "price": 21.99,
-      "tags": ["supplements"],
-      "stock": 33,
-      "image": "https://martinandpleasance.ca/cdn/shop/files/Ener-IVLemonLimeFront.png?v=1718028987"
-    },
-    {
-      "id": 21,
-      "name": "Signature Tank Top",
-      "price": 24.99,
-      "tags": ["apparel", "shirt"],
-      "stock": 55,
-      "image": "https:\/\/imagescdn.simons.ca\/images\/5549-157010-1-A1_2\/signature-logo-ribbed-tank-top.jpg?__=6"
-    },
-    {
-      "id": 22,
-      "name": "Compression Leggings (Men's)",
-      "price": 39.99,
-      "sale_price": 19.99,
-      "tags": ["apparel"],
-      "stock": 28,
-      "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s",
-      "best_seller": true
-    },
-    {
-      "id": 23,
-      "name": "Compression Long Sleeve Shirt",
-      "price": 32.99,
-      "tags": ["shirt", "apparel"],
-      "stock": 26,
-      "image": "https:\/\/i5.walmartimages.com\/asr\/e451b66c-fbf3-491f-bb72-f400a7584948.46c3143ef6f98af99f50edaa49162b7a.jpeg"
-    },
-    {
-      "id": 24,
-      "name": "Olympic Barbell (45lb)",
-      "price": 219.99,
-      "tags": ["equipment"],
-      "stock": 5,
-      "image": "https:\/\/m.media-amazon.com\/images\/I\/51r75wdVeZL.jpg"
-    },
-    {
-      "id": 25,
-      "name": "Barbell Collar Clips (Pair)",
-      "price": 9.99,
-      "tags": ["equipment", "accessory"],
-      "stock": 65,
-      "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQSeGQvt3RiUYR000ldnSCxdm3EZGXtnsPndg&s"
-    }
-  ],
-  "promos": [
-    {
-      "code": "BEAR10",
-      "discount": 0.1
-    },
-    {
-      "code": "NOV50",
-      "discount": 0.5
-    }
-  ],
-  "orders": []
+    ],
+    "inventory": [
+        {
+            "id": 1,
+            "name": "T-Shirt",
+            "price": 29.99,
+            "tags": [
+                "shirt",
+                "apparel"
+            ],
+            "stock": 50,
+            "best_seller": true,
+            "image": "https:\/\/imgs.michaels.com\/MAM\/assets\/1\/5E3C12034D34434F8A9BAAFDDF0F8E1B\/img\/DA613CB785AA46B78C975D5727D7D057\/10532374_11.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Heavyweight Hoodie",
+            "price": 59.99,
+            "tags": [
+                "hoodie",
+                "apparel"
+            ],
+            "stock": 30,
+            "image": "https:\/\/talentless.co\/cdn\/shop\/files\/Men_sHeavyweightHoodie-VintageGranite.jpg?v=1762278363"
+        },
+        {
+            "id": 3,
+            "name": "Performance Training Shorts",
+            "price": 34.99,
+            "tags": [
+                "apparel"
+            ],
+            "stock": 40,
+            "image": "https:\/\/ca.gymreapers.com\/cdn\/shop\/files\/training-shorts-black-front.jpg?v=1706028469&width=2048",
+            "best_seller": true
+        },
+        {
+            "id": 4,
+            "name": "Premium Gym Bag",
+            "price": 49.99,
+            "tags": [
+                "accessory"
+            ],
+            "stock": 25,
+            "image": "https:\/\/uppper.com\/cdn\/shop\/files\/uppper-gym-bag-black-premium-fitness-gear-1.jpg?v=1701885763&width=1946"
+        },
+        {
+            "id": 5,
+            "name": "Wrist Wraps (Heavy Duty)",
+            "price": 19.99,
+            "tags": [
+                "accessory"
+            ],
+            "stock": 70,
+            "image": "https:\/\/www.xtcfitness.ca\/cdn\/shop\/files\/xtc-gear-x-series-padded-grippy-lifting-straps-blue-lifting-straps-xs-pgls-blue-83583573-xtc-gear-42253815152947.jpg?v=1694558120&width=1024"
+        },
+        {
+            "id": 6,
+            "name": "Leather Weightlifting Belt",
+            "price": 44.99,
+            "tags": [
+                "accessory",
+                "equipment"
+            ],
+            "stock": 18,
+            "image": "https:\/\/au.gymreapers.com\/cdn\/shop\/files\/7mm-belt-black-front-angle.jpg?v=1715630030&width=2000"
+        },
+        {
+            "id": 7,
+            "name": "Adjustable Dumbbells (Pair)",
+            "price": 199.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 10,
+            "image": "https:\/\/m.media-amazon.com\/images\/I\/71dBSTcp9cL._AC_UF894,1000_QL80_.jpg"
+        },
+        {
+            "id": 8,
+            "name": "Resistance Band Set (5 Levels)",
+            "price": 24.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 60,
+            "image": "https:\/\/i5.walmartimages.com\/asr\/267ce117-1723-4077-bccf-4c873deff6be.0b04f525be9b3c9ef665728f33547c6c.jpeg"
+        },
+        {
+            "id": 9,
+            "name": "Protein Shaker Bottle",
+            "price": 12.99,
+            "tags": [
+                "accessory"
+            ],
+            "stock": 90,
+            "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRHwTbuJIZ6G80ePpW2TdNg-2v98Qxu0oXTaw&s"
+        },
+        {
+            "id": 10,
+            "name": "Creatine Monohydrate 300g",
+            "price": 24.99,
+            "tags": [
+                "supplements"
+            ],
+            "stock": 35,
+            "image": "https:\/\/media.supplementking.ca\/catalog\/product\/cache\/c7b67f1ce99d1caa405d0fe7ed968970\/o\/n\/on_creatine_300g.jpg"
+        },
+        {
+            "id": 11,
+            "name": "Whey Protein (5lb, Chocolate)",
+            "price": 59.99,
+            "tags": [
+                "supplements"
+            ],
+            "stock": 22,
+            "image": "https:\/\/www.healthyplanetcanada.com\/media\/catalog\/product\/e\/x\/extreme-milk-chocolate.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=500&canvas=500:400"
+        },
+        {
+            "id": 12,
+            "name": "BCAA Recovery Powder (Lemon Lime)",
+            "price": 29.99,
+            "tags": [
+                "supplements"
+            ],
+            "stock": 27,
+            "image": "https:\/\/cloudinary.images-iherb.com\/image\/upload\/f_auto,q_auto:eco\/images\/sci\/sci00021\/l\/51.jpg"
+        },
+        {
+            "id": 13,
+            "name": "Baseball Cap",
+            "price": 19.99,
+            "tags": [
+                "accessory",
+                "apparel"
+            ],
+            "stock": 45,
+            "image": "https:\/\/i5.walmartimages.com\/seo\/Athletic-Works-Men-s-Baseball-Hat_c529f945-cb22-4960-9768-9963a62718cc.c9db7fcc9f70618283ecdeb7faa3512d.jpeg?odnHeight=1067&odnWidth=800&odnBg=FFFFFF",
+            "best_seller": true
+        },
+        {
+            "id": 14,
+            "name": "Heavy Battle Rope (30ft)",
+            "price": 79.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 12,
+            "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcSdUqlaIXtv2dqnC2zSgwD0fVHEhwRaCA1xRw&s"
+        },
+        {
+            "id": 15,
+            "name": "Kettlebell 20lb",
+            "price": 34.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 25,
+            "image": "https:\/\/www.sportchek.ca\/api\/v1\/product\/api\/v1\/product\/image\/70313281f?baseStoreId=SC&lang=en_CA&subscription-key=c01ef3612328420c9f5cd9277e815a0e&imwidth=640&impolicy=mZoom"
+        },
+        {
+            "id": 16,
+            "name": "Kettlebell 35lb",
+            "price": 49.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 20,
+            "image": "https:\/\/m.media-amazon.com\/images\/I\/51btcJcOStL._AC_UF894,1000_QL80_.jpg"
+        },
+        {
+            "id": 17,
+            "name": "Jump Rope (Speed Rope)",
+            "price": 14.99,
+            "tags": [
+                "equipment",
+                "accessory"
+            ],
+            "stock": 75,
+            "image": "https:\/\/commercial.fitnessexperience.ca\/cdn\/shop\/products\/jumprope-10ft-speed-rope-363060_2048x.jpg?v=1675727965"
+        },
+        {
+            "id": 18,
+            "name": "Foam Roller (High Density)",
+            "price": 22.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 30,
+            "image": "https:\/\/www.performancehealth.ca\/media\/catalog\/product\/6\/1\/6126vho0ycl._ac_sl1350_.jpg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
+        },
+        {
+            "id": 19,
+            "name": "Fingerless Workout Gloves",
+            "price": 16.99,
+            "tags": [
+                "accessory"
+            ],
+            "stock": 50,
+            "image": "https:\/\/i5.walmartimages.com\/asr\/1ae80ac4-2c49-4470-8ee8-18be3b08c2d5.c24ed607a0ca8933828a69fda5b368e6.jpeg"
+        },
+        {
+            "id": 20,
+            "name": "Electrolyte Hydration Mix",
+            "price": 21.99,
+            "tags": [
+                "supplements"
+            ],
+            "stock": 33,
+            "image": "https:\/\/martinandpleasance.ca\/cdn\/shop\/files\/Ener-IVLemonLimeFront.png?v=1718028987"
+        },
+        {
+            "id": 21,
+            "name": "Signature Tank Top",
+            "price": 24.99,
+            "tags": [
+                "apparel",
+                "shirt"
+            ],
+            "stock": 55,
+            "image": "https:\/\/imagescdn.simons.ca\/images\/5549-157010-1-A1_2\/signature-logo-ribbed-tank-top.jpg?__=6"
+        },
+        {
+            "id": 22,
+            "name": "Compression Leggings (Men's)",
+            "price": 39.99,
+            "sale_price": 19.99,
+            "tags": [
+                "apparel"
+            ],
+            "stock": 28,
+            "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQWjI5IdXCTipJbRzcCibMYUdav9bVgV6DWTA&s",
+            "best_seller": true
+        },
+        {
+            "id": 23,
+            "name": "Compression Long Sleeve Shirt",
+            "price": 32.99,
+            "tags": [
+                "shirt",
+                "apparel"
+            ],
+            "stock": 26,
+            "image": "https:\/\/i5.walmartimages.com\/asr\/e451b66c-fbf3-491f-bb72-f400a7584948.46c3143ef6f98af99f50edaa49162b7a.jpeg"
+        },
+        {
+            "id": 24,
+            "name": "Olympic Barbell (45lb)",
+            "price": 219.99,
+            "tags": [
+                "equipment"
+            ],
+            "stock": 5,
+            "image": "https:\/\/m.media-amazon.com\/images\/I\/51r75wdVeZL.jpg"
+        },
+        {
+            "id": 25,
+            "name": "Barbell Collar Clips (Pair)",
+            "price": 9.99,
+            "tags": [
+                "equipment",
+                "accessory"
+            ],
+            "stock": 65,
+            "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQSeGQvt3RiUYR000ldnSCxdm3EZGXtnsPndg&s"
+        }
+    ],
+    "promos": [
+        {
+            "code": "BEAR10",
+            "discount": 0.1
+        },
+        {
+            "code": "NOV50",
+            "discount": 0.5
+        },
+        {
+            "code": "NOV1000",
+            "discount": 1.13
+        }
+    ],
+    "orders": []
 }

@@ -224,7 +224,7 @@ require_once __DIR__ . "/var/helpers.php"; ?>
             const card = document.createElement("div");
             card.className = "item-card";
             card.innerHTML = `
-              <a href="product.php?id=${item.id}">
+              <a href="product.php?id=${item.id}" class="item-card-link">
                   <img src="${item.image}" alt="Item Image">
                   <h3>${item.name}</h3>
                   <p>
@@ -237,6 +237,14 @@ require_once __DIR__ . "/var/helpers.php"; ?>
             `;
             grid.appendChild(card);
         }
+
+        document.querySelectorAll(".item-card-link").forEach(a => {
+          a.addEventListener("click", (e) => {
+            if (e.target.tagName === "BUTTON") {
+              e.preventDefault();
+            }
+          })
+        })
     }
 
     // -----------------------------------------------------------

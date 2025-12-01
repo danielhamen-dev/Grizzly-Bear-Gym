@@ -73,7 +73,13 @@ function renderProduct(item) {
             <div class="product-info">
                 <h2>${item.name}</h2>
 
-                <p class="prod-price">$${item.price.toFixed(2)}</p>
+                <p class="prod-price">
+                  ${item.sale_price ?
+                  `<span class="old-price" style="
+                  color: rgba(255, 255, 255, 0.5);">$${item.price.toFixed(2)}</span>
+                  <span class="sale-price">$${item.sale_price.toFixed(2)}</span>` :
+                  `$${item.price.toFixed(2)}`}
+                </p>
 
                 <p class="prod-stock">Stock: ${item.stock}</p>
 

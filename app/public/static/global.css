@@ -728,3 +728,8 @@ select:focus {
         margin: 0 auto;
     }
 }
+
+.old-price {
+    text-decoration: line-through;
+    opacity: 40%;
+}
