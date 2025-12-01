@@ -7,7 +7,7 @@
       "cart": [
         {
           "id": 24,
-          "qty": 1
+          "qty": 4
         }
       ]
     }
@@ -66,7 +66,7 @@
       "price": 199.99,
       "tags": ["equipment"],
       "stock": 10,
-      "image": "https://m.media-amazon.com/images/I/71dBSTcp9cL._AC_UF894,1000_QL80_.jpg"
+      "image": "https:\/\/m.media-amazon.com\/images\/I\/71dBSTcp9cL._AC_UF894,1000_QL80_.jpg"
     },
     {
       "id": 8,
@@ -74,7 +74,7 @@
       "price": 24.99,
       "tags": ["equipment"],
       "stock": 60,
-      "image": "https://i5.walmartimages.com/asr/267ce117-1723-4077-bccf-4c873deff6be.0b04f525be9b3c9ef665728f33547c6c.jpeg"
+      "image": "https:\/\/i5.walmartimages.com\/asr\/267ce117-1723-4077-bccf-4c873deff6be.0b04f525be9b3c9ef665728f33547c6c.jpeg"
     },
     {
       "id": 9,
@@ -82,7 +82,7 @@
       "price": 12.99,
       "tags": ["accessory"],
       "stock": 90,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHwTbuJIZ6G80ePpW2TdNg-2v98Qxu0oXTaw&s"
+      "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcRHwTbuJIZ6G80ePpW2TdNg-2v98Qxu0oXTaw&s"
     },
     {
       "id": 10,
@@ -90,7 +90,7 @@
       "price": 24.99,
       "tags": ["supplements"],
       "stock": 35,
-      "image": "https://media.supplementking.ca/catalog/product/cache/c7b67f1ce99d1caa405d0fe7ed968970/o/n/on_creatine_300g.jpg"
+      "image": "https:\/\/media.supplementking.ca\/catalog\/product\/cache\/c7b67f1ce99d1caa405d0fe7ed968970\/o\/n\/on_creatine_300g.jpg"
     },
     {
       "id": 11,
@@ -98,7 +98,7 @@
       "price": 59.99,
       "tags": ["supplements"],
       "stock": 22,
-      "image": "https://www.healthyplanetcanada.com/media/catalog/product/e/x/extreme-milk-chocolate.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=500&canvas=500:400"
+      "image": "https:\/\/www.healthyplanetcanada.com\/media\/catalog\/product\/e\/x\/extreme-milk-chocolate.png?optimize=medium&bg-color=255,255,255&fit=bounds&height=400&width=500&canvas=500:400"
     },
     {
       "id": 12,
@@ -106,7 +106,7 @@
       "price": 29.99,
       "tags": ["supplements"],
       "stock": 27,
-      "image": "https://cloudinary.images-iherb.com/image/upload/f_auto,q_auto:eco/images/sci/sci00021/l/51.jpg"
+      "image": "https:\/\/cloudinary.images-iherb.com\/image\/upload\/f_auto,q_auto:eco\/images\/sci\/sci00021\/l\/51.jpg"
     },
     {
       "id": 13,
@@ -150,21 +150,24 @@
       "name": "Foam Roller (High Density)",
       "price": 22.99,
       "tags": ["equipment"],
-      "stock": 30
+      "stock": 30,
+      "image": "https://www.performancehealth.ca/media/catalog/product/6/1/6126vho0ycl._ac_sl1350_.jpg?optimize=low&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
     },
     {
       "id": 19,
       "name": "Fingerless Workout Gloves",
       "price": 16.99,
       "tags": ["accessory"],
-      "stock": 50
+      "stock": 50,
+      "image": "https://i5.walmartimages.com/asr/1ae80ac4-2c49-4470-8ee8-18be3b08c2d5.c24ed607a0ca8933828a69fda5b368e6.jpeg"
     },
     {
       "id": 20,
       "name": "Electrolyte Hydration Mix",
       "price": 21.99,
       "tags": ["supplements"],
-      "stock": 33
+      "stock": 33,
+      "image": "https://martinandpleasance.ca/cdn/shop/files/Ener-IVLemonLimeFront.png?v=1718028987"
     },
     {
       "id": 21,
@@ -172,7 +175,7 @@
       "price": 24.99,
       "tags": ["apparel", "shirt"],
       "stock": 55,
-      "image": "https://imagescdn.simons.ca/images/5549-157010-1-A1_2/signature-logo-ribbed-tank-top.jpg?__=6"
+      "image": "https:\/\/imagescdn.simons.ca\/images\/5549-157010-1-A1_2\/signature-logo-ribbed-tank-top.jpg?__=6"
     },
     {
       "id": 22,
@@ -190,7 +193,7 @@
       "price": 32.99,
       "tags": ["shirt", "apparel"],
       "stock": 26,
-      "image": "https://i5.walmartimages.com/asr/e451b66c-fbf3-491f-bb72-f400a7584948.46c3143ef6f98af99f50edaa49162b7a.jpeg"
+      "image": "https:\/\/i5.walmartimages.com\/asr\/e451b66c-fbf3-491f-bb72-f400a7584948.46c3143ef6f98af99f50edaa49162b7a.jpeg"
     },
     {
       "id": 24,
@@ -206,7 +209,7 @@
       "price": 9.99,
       "tags": ["equipment", "accessory"],
       "stock": 65,
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSeGQvt3RiUYR000ldnSCxdm3EZGXtnsPndg&s"
+      "image": "https:\/\/encrypted-tbn0.gstatic.com\/images?q=tbn:ANd9GcQSeGQvt3RiUYR000ldnSCxdm3EZGXtnsPndg&s"
     }
   ],
   "promos": [

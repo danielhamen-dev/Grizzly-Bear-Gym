@@ -27,12 +27,22 @@ require_once __DIR__ . "/var/helpers.php"; ?>
     <!-- ----------------------------------------------------- -->
     <div class="hero">
         <div class="hero-overlay">
-            <h1>Shop Grizzly Gear</h1>
+            <div class="overlay-content">
+                <p class="tagline">Black Friday All Month</p>
+                <h1 class="subtitle">Gear Up & Save Big</h1>
+                <div class="sale-countdown">
+                    <p class="countdown-label">Sale ends in</p>
+                    <div id="saleCountdown" class="sale-countdown-timer">
+                        <span class="time-part"><span class="num">00</span><span class="label">Days</span></span>
+                        <span class="time-part"><span class="num">00</span><span class="label">Hours</span></span>
+                        <span class="time-part"><span class="num">00</span><span class="label">Mins</span></span>
+                        <span class="time-part"><span class="num">00</span><span class="label">Secs</span></span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <main id="shop-content">
-
-
         <!-- search -->
         <div class="search-row">
             <input id="searchBox" type="text" placeholder="Search products…">
@@ -283,6 +293,64 @@ require_once __DIR__ . "/var/helpers.php"; ?>
     }
 
     loadInventory();
+
+    function startCountdown() {
+        const countdownEl = document.getElementById("saleCountdown");
+        if (!countdownEl) return;
+
+        // Get spans in the order Days, Hours, Mins, Secs
+        const [daysEl, hoursEl, minsEl, secsEl] =
+            countdownEl.querySelectorAll(".time-part .num");
+
+        function getNextFriday() {
+            const now = new Date();
+            const target = new Date(now);
+
+            // Set to Friday of THIS week
+            const day = now.getDay(); // 0 = Sunday, 5 = Friday
+            const daysUntilFriday = (5 - day + 7) % 7;
+
+            // If today *is* Friday but time already passed, go to NEXT Friday
+            if (daysUntilFriday === 0 && now.getHours() >= 23 && now.getMinutes() >= 59) {
+                target.setDate(target.getDate() + 7);
+            } else {
+                target.setDate(target.getDate() + daysUntilFriday);
+            }
+
+            target.setHours(23, 59, 59, 999);
+            return target;
+        }
+
+        function update() {
+            const now = new Date();
+            const friday = getNextFriday();
+
+            const diff = friday - now;
+
+            if (diff <= 0) {
+                daysEl.textContent = "00";
+                hoursEl.textContent = "00";
+                minsEl.textContent = "00";
+                secsEl.textContent = "00";
+                return;
+            }
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const mins = Math.floor((diff / (1000 * 60)) % 60);
+            const secs = Math.floor((diff / 1000) % 60);
+
+            daysEl.textContent = String(days).padStart(2, "0");
+            hoursEl.textContent = String(hours).padStart(2, "0");
+            minsEl.textContent = String(mins).padStart(2, "0");
+            secsEl.textContent = String(secs).padStart(2, "0");
+        }
+
+        update();
+        setInterval(update, 1000);
+    }
+
+    startCountdown();
     </script>
 
 
