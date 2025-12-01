@@ -58,8 +58,8 @@ function get_footer_bar()
                     <li><a href="/shop.php?tag=supplements">Supplements</a></li>
                     <li><a href="/shop.php?tag=accessories">Accessories</a></li>
                     <li><a href="/shop.php?tag=apparel">Apparel</a></li>
-                    <li><a href="/about.php">About Us</a></li>
-                    <li><a href="/contact.php">Contact</a></li>
+                    <li><a href="/home.php#about">About Us</a></li>
+                    <li><a href="/home.php#contact">Contact</a></li>
                 </ul>
             </div>
 
